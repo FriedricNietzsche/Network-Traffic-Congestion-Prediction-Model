@@ -19,6 +19,13 @@ End‑to‑end machine learning and monitoring system for predicting network tra
 * Dark mode toggle, auto refresh, artifact downloads (model, scaler, metrics, versioned models).
 * Logging to file and console; extensible YAML configuration.
 * Automated pytest suite (data generation, feature engineering, prediction, API, explainability, presets) with warning suppression.
+  
+##Images
+<img width="1872" height="892" alt="image" src="https://github.com/user-attachments/assets/16233a2c-0f99-411b-95d2-e67f12a8785f" />
+<img width="1364" height="889" alt="image" src="https://github.com/user-attachments/assets/cd4ac52d-12a3-41b5-a1f3-044c6bc0adc4" />
+<img width="1869" height="4260" alt="image" src="https://github.com/user-attachments/assets/58948aae-7eb6-4d78-9159-7857b98a72ae" />
+
+
 
 ## Architecture Overview
 * Data: Synthetic generation (`src/data/generate_data.py`).

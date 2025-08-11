@@ -1,0 +1,71 @@
+# Data parameters
+data:
+  raw_path: "data/traffic_data.csv"
+  processed_path: "data/processed_traffic_data.csv"
+  test_size: 0.2
+  random_state: 42
+
+# Model parameters
+model:
+  primary: "random_forest"  # options: random_forest, xgboost
+  random_state: 42
+  class_weight: "balanced"
+  imbalance:
+    enable: true
+    method: "smote"  # options: smote, random_over, none
+    random_state: 42
+  random_forest:
+    param_grid:
+      n_estimators: [100, 200, 400]
+      max_depth: [null, 10, 20, 40]
+      min_samples_split: [2, 5, 10]
+      min_samples_leaf: [1, 2, 4]
+  xgboost:
+    param_grid:
+      n_estimators: [200, 400]
+      max_depth: [3, 6, 10]
+      learning_rate: [0.01, 0.05, 0.1]
+      subsample: [0.7, 1.0]
+      colsample_bytree: [0.7, 1.0]
+  cv_splits: 5
+  search_iterations: 15
+  scoring: "f1"
+
+api:
+  enable_cors: true
+  default_host: "0.0.0.0"
+  default_port: 5000
+  default_threshold: 0.5
+
+versioning:
+  enable: true
+  directory: "models/versions"
+  keep_last: 10
+
+# Feature engineering
+features:
+  numerical_features:
+    - packet_size
+    - bytes_sent
+    - packet_size_mean
+    - bytes_sent_sum
+    - timestamp_seconds
+    - hour
+    - hour_sin
+    - hour_cos
+    - source_ip_int
+    - dest_ip_int
+    - packet_rate
+  categorical_features:
+    - protocol
+
+# Paths for saving models and artifacts
+paths:
+  model_path: "models/congestion_model.pkl"
+  scaler_path: "models/scaler.pkl"
+  features_path: "models/X.pkl"
+
+# Logging configuration
+logging:
+  log_path: "logs/traffic_analysis.log"
+  level: "INFO"

@@ -1,0 +1,118 @@
+{% extends 'base.html' %}
+{% block title %}Predict - Traffic Congestion{% endblock %}
+{% block content %}
+    <h1>Traffic Congestion Prediction</h1>
+    <form method="POST" action="/predictdata" id="predictForm">
+            <label for="presetSelect">Preset:</label>
+            <select id="presetSelect" style="margin-bottom:12px;">
+                <option value="">-- choose preset --</option>
+                <option value="low">Low Load (likely Normal)</option>
+                <option value="peak">Peak Hour High Bytes</option>
+                <option value="burst">UDP Burst</option>
+                <option value="http">HTTP Heavy Session</option>
+            </select><br>
+
+            <label for="packet_size">Packet Size:</label>
+            <input type="number" id="packet_size" name="packet_size" required><br><br>
+
+            <label for="bytes_sent">Bytes Sent:</label>
+            <input type="number" id="bytes_sent" name="bytes_sent" required><br><br>
+
+            <label for="source_ip">Source IP:</label>
+            <input type="text" id="source_ip" name="source_ip" required><br><br>
+
+            <label for="dest_ip">Destination IP:</label>
+            <input type="text" id="dest_ip" name="dest_ip" required><br><br>
+
+            <label for="protocol">Protocol:</label>
+            <select id="protocol" name="protocol" required>
+                <option value="TCP">TCP</option>
+                <option value="UDP">UDP</option>
+                <option value="HTTP">HTTP</option>
+            </select><br><br>
+
+            <label for="timestamp_seconds">Timestamp (Seconds):</label>
+            <input type="number" id="timestamp_seconds" name="timestamp_seconds" required><br><br>
+
+            <label for="hour">Hour:</label>
+            <input type="number" id="hour" name="hour" min="0" max="23" required><br><br>
+
+                        <div style="margin:10px 0;">
+                            <label for="thresholdInput">Threshold:</label>
+                            <input type="number" id="thresholdInput" value="0.5" min="0.05" max="0.95" step="0.01" style="width:80px;" />
+                        </div>
+                        <button type="submit">Predict</button>
+                        <button type="button" id="randomizeBtn" style="margin-left:6px;">Randomize</button>
+        </form>
+
+                {% if result %}
+                        <div class="result">
+                                <h2>Congestion Status: {{ result }}</h2>
+                                {% if probability %}<p>Probability (class=1): {{ probability }}</p>{% endif %}
+                        </div>
+        {% elif error %}
+            <div class="error">
+                <h2>Error: {{ error }}</h2>
+            </div>
+        {% endif %}
+            <hr>
+            <h2>Quick JSON API Test</h2>
+            <button class="btn" id="apiTestBtn" type="button">Send API Request (uses above form values)</button>
+            <pre id="apiResult" class="code-panel"></pre>
+        {% endblock %}
+        {% block scripts %}
+        <script>
+document.getElementById('apiTestBtn').addEventListener('click', () => {
+    const payload = {
+        packet_size: parseInt(document.getElementById('packet_size').value),
+        bytes_sent: parseInt(document.getElementById('bytes_sent').value),
+        source_ip: document.getElementById('source_ip').value,
+        dest_ip: document.getElementById('dest_ip').value,
+        protocol: document.getElementById('protocol').value,
+        timestamp_seconds: parseInt(document.getElementById('timestamp_seconds').value),
+        hour: parseInt(document.getElementById('hour').value)
+    };
+    const th = parseFloat(document.getElementById('thresholdInput').value)||0.5;
+    fetch('/api/predict?threshold='+th, {method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(payload)})
+        .then(r=>r.json())
+        .then(data=>{ document.getElementById('apiResult').textContent = JSON.stringify(data, null, 2); })
+        .catch(err=>{ document.getElementById('apiResult').textContent = err.toString(); });
+});
+
+// Preset handling
+// NOTE: Training data bytes_sent max ~= 6000 (packet_size * 1..4). Previous presets exceeded this and produced out-of-distribution values
+// that skewed predictions toward 'Congested'. Adjusted to stay in-distribution so model behavior is more meaningful.
+const presets = {
+    low:{packet_size:150,bytes_sent:300,source_ip:'192.168.0.10',dest_ip:'192.168.0.20',protocol:'TCP',hour:3}, // off-peak low load
+    peak:{packet_size:1300,bytes_sent:5200,source_ip:'10.0.0.5',dest_ip:'10.0.0.55',protocol:'TCP',hour:18},    // peak hour heavy TCP
+    burst:{packet_size:700,bytes_sent:3500,source_ip:'172.16.1.2',dest_ip:'172.16.1.200',protocol:'UDP',hour:12}, // midday UDP burst
+    http:{packet_size:1100,bytes_sent:4400,source_ip:'192.168.1.100',dest_ip:'192.168.1.210',protocol:'HTTP',hour:17} // high HTTP session
+};
+const presetSelect = document.getElementById('presetSelect');
+const tsField = document.getElementById('timestamp_seconds');
+presetSelect.addEventListener('change', ()=>{
+    const key = presetSelect.value; if(!key) return; const p = presets[key];
+    document.getElementById('packet_size').value = p.packet_size;
+    document.getElementById('bytes_sent').value = p.bytes_sent;
+    document.getElementById('source_ip').value = p.source_ip;
+    document.getElementById('dest_ip').value = p.dest_ip;
+    document.getElementById('protocol').value = p.protocol;
+    document.getElementById('hour').value = p.hour;
+    tsField.value = Math.floor(Date.now()/1000);
+});
+
+// Randomize button
+document.getElementById('randomizeBtn').addEventListener('click', ()=>{
+    const rand = (min,max)=> Math.floor(Math.random()*(max-min+1))+min;
+    document.getElementById('packet_size').value = rand(100,1500);
+    // keep within realistic training distribution (roughly packet_size * 1..4)
+    document.getElementById('bytes_sent').value = rand(100,6000);
+    document.getElementById('source_ip').value = `192.168.${rand(0,254)}.${rand(1,254)}`;
+    document.getElementById('dest_ip').value = `10.0.${rand(0,254)}.${rand(1,254)}`;
+    const protocols = ['TCP','UDP','HTTP'];
+    document.getElementById('protocol').value = protocols[rand(0, protocols.length-1)];
+    document.getElementById('hour').value = rand(0,23);
+    tsField.value = Math.floor(Date.now()/1000);
+});
+        </script>
+        {% endblock %}

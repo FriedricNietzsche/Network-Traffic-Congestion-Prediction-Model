@@ -1,0 +1,1672 @@
+2025-08-10 20:14:22,422 - traffic_analysis - INFO - Generating 1000 samples of synthetic traffic data
+2025-08-10 20:14:22,430 - traffic_analysis - INFO - Saved generated data to data/traffic_data.csv
+2025-08-10 20:16:26,917 - traffic_analysis - INFO - Starting traffic analysis pipeline
+2025-08-10 20:16:26,917 - traffic_analysis - INFO - Starting traffic analysis pipeline
+2025-08-10 20:16:26,918 - traffic_analysis - INFO - Loading existing data from data/traffic_data.csv
+2025-08-10 20:16:26,919 - traffic_analysis - INFO - Loading existing data from data/traffic_data.csv
+2025-08-10 20:16:26,931 - traffic_analysis - INFO - Performing exploratory data analysis
+2025-08-10 20:16:26,931 - traffic_analysis - INFO - Performing exploratory data analysis
+2025-08-10 20:16:26,931 - traffic_analysis - INFO - Plotting class distribution
+2025-08-10 20:16:26,931 - traffic_analysis - INFO - Plotting class distribution
+2025-08-10 20:16:52,466 - traffic_analysis - INFO - Starting traffic analysis pipeline
+2025-08-10 20:16:52,467 - traffic_analysis - INFO - Loading existing data from data/traffic_data.csv
+2025-08-10 20:16:52,471 - traffic_analysis - INFO - Performing exploratory data analysis
+2025-08-10 20:16:52,471 - traffic_analysis - INFO - Plotting class distribution
+2025-08-10 20:16:52,524 - traffic_analysis - INFO - Saved class distribution plot to visualization\class_distribution.png
+2025-08-10 20:16:52,524 - traffic_analysis - INFO - Plotting traffic volume over time
+2025-08-10 20:16:52,585 - traffic_analysis - INFO - Saved traffic volume plot to visualization\traffic_volume.png
+2025-08-10 20:16:52,585 - traffic_analysis - INFO - Plotting protocol distribution
+2025-08-10 20:16:52,615 - traffic_analysis - INFO - Saved protocol distribution plot to visualization\protocol_distribution.png
+2025-08-10 20:16:52,615 - traffic_analysis - INFO - Plotting congestion over time
+2025-08-10 20:16:52,664 - traffic_analysis - INFO - Saved congestion over time plot to visualization\congestion_over_time.png
+2025-08-10 20:16:52,664 - traffic_analysis - INFO - Performing feature engineering
+2025-08-10 20:16:52,664 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 20:16:52,667 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 20:16:52,670 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 20:16:52,671 - traffic_analysis - INFO - Calculating packet rate
+2025-08-10 20:16:52,887 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 20:16:52,888 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 20:16:52,891 - traffic_analysis - INFO - Saved scaler to models/scaler.pkl
+2025-08-10 20:16:52,891 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 20:16:52,891 - traffic_analysis - INFO - Training the model
+2025-08-10 20:16:52,891 - traffic_analysis - INFO - Starting model training process
+2025-08-10 20:16:52,892 - traffic_analysis - INFO - Splitting data into train and test sets
+2025-08-10 20:16:52,894 - traffic_analysis - INFO - Saved feature dataframe to models/X.pkl
+2025-08-10 20:16:52,894 - traffic_analysis - INFO - Performing time series cross-validation
+2025-08-10 20:16:52,894 - traffic_analysis - INFO - Training on fold
+2025-08-10 20:16:54,753 - traffic_analysis - INFO - New best model found with F1 score: 0.4177
+2025-08-10 20:16:54,754 - traffic_analysis - INFO - Training on fold
+2025-08-10 20:16:57,255 - traffic_analysis - INFO - New best model found with F1 score: 0.5444
+2025-08-10 20:16:57,255 - traffic_analysis - INFO - Training on fold
+2025-08-10 20:17:00,001 - traffic_analysis - INFO - Training on fold
+2025-08-10 20:17:02,631 - traffic_analysis - INFO - Training on fold
+2025-08-10 20:17:06,837 - traffic_analysis - INFO - Evaluating final model on test set
+2025-08-10 20:17:06,845 - traffic_analysis - INFO - Final model metrics:
+2025-08-10 20:17:06,845 - traffic_analysis - INFO - Precision: 0.7010
+2025-08-10 20:17:06,845 - traffic_analysis - INFO - Recall: 0.6602
+2025-08-10 20:17:06,845 - traffic_analysis - INFO - AUC-ROC: 0.6806
+2025-08-10 20:17:06,846 - traffic_analysis - INFO - F1 Score: 0.6800
+2025-08-10 20:17:06,851 - traffic_analysis - INFO - Saved model to models/congestion_model.pkl
+2025-08-10 20:17:06,851 - traffic_analysis - INFO - Creating model evaluation visualizations
+2025-08-10 20:17:06,852 - traffic_analysis - INFO - Plotting confusion matrix
+2025-08-10 20:17:06,893 - traffic_analysis - INFO - Saved confusion matrix plot to visualization\confusion_matrix.png
+2025-08-10 20:17:06,893 - traffic_analysis - INFO - Plotting feature importance
+2025-08-10 20:17:06,952 - traffic_analysis - INFO - Saved feature importance plot to visualization\feature_importance.png
+2025-08-10 20:17:06,952 - traffic_analysis - INFO - Pipeline completed successfully
+2025-08-10 20:28:07,883 - traffic_analysis - INFO - Starting prediction process
+2025-08-10 20:28:07,989 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 20:28:07,993 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 20:28:07,993 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 20:28:07,995 - traffic_analysis - INFO - Skipping packet rate calculation for single record
+2025-08-10 20:28:07,996 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 20:28:07,998 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 20:28:07,999 - traffic_analysis - ERROR - Invalid input data: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- hour_cos
+- hour_sin
+
+2025-08-10 20:28:07,999 - traffic_analysis - ERROR - API prediction error: too many values to unpack (expected 2)
+2025-08-10 20:29:22,756 - traffic_analysis - INFO - Starting prediction process
+2025-08-10 20:29:22,762 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 20:29:22,766 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 20:29:22,766 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 20:29:22,768 - traffic_analysis - INFO - Skipping packet rate calculation for single record
+2025-08-10 20:29:22,768 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 20:29:22,770 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 20:29:22,770 - traffic_analysis - ERROR - Invalid input data: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- hour_cos
+- hour_sin
+
+2025-08-10 20:29:22,771 - traffic_analysis - ERROR - Error in prediction: too many values to unpack (expected 2)
+2025-08-10 20:29:26,237 - traffic_analysis - INFO - Starting prediction process
+2025-08-10 20:29:26,243 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 20:29:26,247 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 20:29:26,247 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 20:29:26,249 - traffic_analysis - INFO - Skipping packet rate calculation for single record
+2025-08-10 20:29:26,250 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 20:29:26,251 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 20:29:26,252 - traffic_analysis - ERROR - Invalid input data: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- hour_cos
+- hour_sin
+
+2025-08-10 20:29:26,253 - traffic_analysis - ERROR - API prediction error: too many values to unpack (expected 2)
+2025-08-10 20:29:35,845 - traffic_analysis - INFO - Starting prediction process
+2025-08-10 20:29:35,852 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 20:29:35,855 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 20:29:35,855 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 20:29:35,856 - traffic_analysis - INFO - Skipping packet rate calculation for single record
+2025-08-10 20:29:35,856 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 20:29:35,858 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 20:29:35,858 - traffic_analysis - ERROR - Invalid input data: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- hour_cos
+- hour_sin
+
+2025-08-10 20:29:35,858 - traffic_analysis - ERROR - API prediction error: too many values to unpack (expected 2)
+2025-08-10 20:30:21,621 - traffic_analysis - INFO - Starting prediction process
+2025-08-10 20:30:21,700 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 20:30:21,704 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 20:30:21,704 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 20:30:21,705 - traffic_analysis - INFO - Skipping packet rate calculation for single record
+2025-08-10 20:30:21,706 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 20:30:21,707 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 20:30:21,707 - traffic_analysis - ERROR - Invalid input data: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- hour_cos
+- hour_sin
+
+2025-08-10 20:30:35,732 - traffic_analysis - INFO - Starting prediction process
+2025-08-10 20:30:35,810 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 20:30:35,813 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 20:30:35,813 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 20:30:35,815 - traffic_analysis - INFO - Skipping packet rate calculation for single record
+2025-08-10 20:30:35,815 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 20:30:35,816 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 20:30:35,816 - traffic_analysis - WARNING - Dropping unseen numerical features for inference: {'hour_cos', 'hour_sin'}
+2025-08-10 20:30:35,817 - traffic_analysis - INFO - Loaded scaler from config\..\models/scaler.pkl
+2025-08-10 20:30:35,818 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 20:30:35,825 - traffic_analysis - INFO - Prediction completed: 0 (proba=0.39786333027906956)
+2025-08-10 20:30:45,395 - traffic_analysis - INFO - Starting prediction process
+2025-08-10 20:30:45,474 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 20:30:45,476 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 20:30:45,477 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 20:30:45,478 - traffic_analysis - INFO - Skipping packet rate calculation for single record
+2025-08-10 20:30:45,478 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 20:30:45,480 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 20:30:45,480 - traffic_analysis - WARNING - Dropping unseen numerical features for inference: {'hour_sin', 'hour_cos'}
+2025-08-10 20:30:45,481 - traffic_analysis - INFO - Loaded scaler from config\..\models/scaler.pkl
+2025-08-10 20:30:45,481 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 20:30:45,488 - traffic_analysis - INFO - Prediction completed: 1 (proba=0.6880341465523356)
+2025-08-10 20:30:46,591 - traffic_analysis - INFO - Starting prediction process
+2025-08-10 20:30:46,597 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 20:30:46,600 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 20:30:46,600 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 20:30:46,602 - traffic_analysis - INFO - Skipping packet rate calculation for single record
+2025-08-10 20:30:46,602 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 20:30:46,603 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 20:30:46,603 - traffic_analysis - WARNING - Dropping unseen numerical features for inference: {'hour_sin', 'hour_cos'}
+2025-08-10 20:30:46,604 - traffic_analysis - INFO - Loaded scaler from config\..\models/scaler.pkl
+2025-08-10 20:30:46,604 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 20:30:46,611 - traffic_analysis - INFO - Prediction completed: 0 (proba=0.4621965339560866)
+2025-08-10 20:32:29,852 - traffic_analysis - INFO - Starting prediction process
+2025-08-10 20:32:29,931 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 20:32:29,934 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 20:32:29,934 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 20:32:29,936 - traffic_analysis - INFO - Skipping packet rate calculation for single record
+2025-08-10 20:32:29,936 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 20:32:29,937 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 20:32:29,937 - traffic_analysis - WARNING - Dropping unseen numerical features for inference: {'hour_sin', 'hour_cos'}
+2025-08-10 20:32:29,938 - traffic_analysis - INFO - Loaded scaler from config\..\models/scaler.pkl
+2025-08-10 20:32:29,938 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 20:32:29,945 - traffic_analysis - INFO - Prediction completed: 1 (proba=0.6880341465523356)
+2025-08-10 20:32:33,353 - traffic_analysis - INFO - Starting prediction process
+2025-08-10 20:32:33,359 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 20:32:33,362 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 20:32:33,363 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 20:32:33,364 - traffic_analysis - INFO - Skipping packet rate calculation for single record
+2025-08-10 20:32:33,364 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 20:32:33,365 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 20:32:33,365 - traffic_analysis - WARNING - Dropping unseen numerical features for inference: {'hour_sin', 'hour_cos'}
+2025-08-10 20:32:33,366 - traffic_analysis - INFO - Loaded scaler from config\..\models/scaler.pkl
+2025-08-10 20:32:33,366 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 20:32:33,374 - traffic_analysis - INFO - Prediction completed: 0 (proba=0.4621965339560866)
+2025-08-10 20:32:55,132 - traffic_analysis - INFO - Starting prediction process
+2025-08-10 20:32:55,209 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 20:32:55,212 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 20:32:55,212 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 20:32:55,213 - traffic_analysis - INFO - Skipping packet rate calculation for single record
+2025-08-10 20:32:55,214 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 20:32:55,215 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 20:32:55,215 - traffic_analysis - WARNING - Dropping unseen numerical features for inference: {'hour_cos', 'hour_sin'}
+2025-08-10 20:32:55,216 - traffic_analysis - INFO - Loaded scaler from config\..\models/scaler.pkl
+2025-08-10 20:32:55,216 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 20:32:55,223 - traffic_analysis - INFO - Prediction completed: 1 (proba=0.6880341465523356)
+2025-08-10 20:32:59,379 - traffic_analysis - INFO - Starting prediction process
+2025-08-10 20:32:59,385 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 20:32:59,388 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 20:32:59,388 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 20:32:59,389 - traffic_analysis - INFO - Skipping packet rate calculation for single record
+2025-08-10 20:32:59,390 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 20:32:59,391 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 20:32:59,391 - traffic_analysis - WARNING - Dropping unseen numerical features for inference: {'hour_cos', 'hour_sin'}
+2025-08-10 20:32:59,392 - traffic_analysis - INFO - Loaded scaler from config\..\models/scaler.pkl
+2025-08-10 20:32:59,392 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 20:32:59,399 - traffic_analysis - INFO - Prediction completed: 0 (proba=0.4621965339560866)
+2025-08-10 20:34:15,530 - traffic_analysis - INFO - Starting prediction process
+2025-08-10 20:34:15,537 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 20:34:15,540 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 20:34:15,540 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 20:34:15,541 - traffic_analysis - INFO - Skipping packet rate calculation for single record
+2025-08-10 20:34:15,541 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 20:34:15,542 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 20:34:15,543 - traffic_analysis - WARNING - Dropping unseen numerical features for inference: {'hour_cos', 'hour_sin'}
+2025-08-10 20:34:15,544 - traffic_analysis - INFO - Loaded scaler from config\..\models/scaler.pkl
+2025-08-10 20:34:15,544 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 20:34:15,551 - traffic_analysis - INFO - Prediction completed: 1 (proba=0.6493590996493475)
+2025-08-10 20:34:21,684 - traffic_analysis - INFO - Starting prediction process
+2025-08-10 20:34:21,690 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 20:34:21,693 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 20:34:21,693 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 20:34:21,694 - traffic_analysis - INFO - Skipping packet rate calculation for single record
+2025-08-10 20:34:21,695 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 20:34:21,696 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 20:34:21,696 - traffic_analysis - WARNING - Dropping unseen numerical features for inference: {'hour_cos', 'hour_sin'}
+2025-08-10 20:34:21,697 - traffic_analysis - INFO - Loaded scaler from config\..\models/scaler.pkl
+2025-08-10 20:34:21,697 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 20:34:21,704 - traffic_analysis - INFO - Prediction completed: 0 (proba=0.4621965339560866)
+2025-08-10 20:37:23,232 - traffic_analysis - INFO - Starting prediction process
+2025-08-10 20:37:23,315 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 20:37:23,318 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 20:37:23,318 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 20:37:23,319 - traffic_analysis - INFO - Skipping packet rate calculation for single record
+2025-08-10 20:37:23,320 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 20:37:23,321 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 20:37:23,321 - traffic_analysis - WARNING - Dropping unseen numerical features for inference: {'hour_cos', 'hour_sin'}
+2025-08-10 20:37:23,322 - traffic_analysis - INFO - Loaded scaler from config\..\models/scaler.pkl
+2025-08-10 20:37:23,322 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 20:37:23,330 - traffic_analysis - INFO - Prediction completed: 0 (proba=0.3816875131732412)
+2025-08-10 20:37:59,007 - traffic_analysis - INFO - Starting prediction process
+2025-08-10 20:37:59,013 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 20:37:59,016 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 20:37:59,017 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 20:37:59,018 - traffic_analysis - INFO - Skipping packet rate calculation for single record
+2025-08-10 20:37:59,018 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 20:37:59,019 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 20:37:59,020 - traffic_analysis - WARNING - Dropping unseen numerical features for inference: {'hour_cos', 'hour_sin'}
+2025-08-10 20:37:59,020 - traffic_analysis - INFO - Loaded scaler from config\..\models/scaler.pkl
+2025-08-10 20:37:59,021 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 20:37:59,028 - traffic_analysis - INFO - Prediction completed: 0 (proba=0.4770895938637276)
+2025-08-10 20:46:02,025 - traffic_analysis - INFO - Generating 1000 samples of synthetic traffic data
+2025-08-10 20:46:02,033 - traffic_analysis - INFO - Saved generated data to data/traffic_data.csv
+2025-08-10 20:46:08,882 - traffic_analysis - INFO - Starting traffic analysis pipeline
+2025-08-10 20:46:08,884 - traffic_analysis - INFO - Loading existing data from data/traffic_data.csv
+2025-08-10 20:46:08,897 - traffic_analysis - INFO - Performing exploratory data analysis
+2025-08-10 20:46:08,897 - traffic_analysis - INFO - Plotting class distribution
+2025-08-10 20:46:08,937 - traffic_analysis - INFO - Saved class distribution plot to visualization\class_distribution.png
+2025-08-10 20:46:08,937 - traffic_analysis - INFO - Plotting traffic volume over time
+2025-08-10 20:46:08,999 - traffic_analysis - INFO - Saved traffic volume plot to visualization\traffic_volume.png
+2025-08-10 20:46:08,999 - traffic_analysis - INFO - Plotting protocol distribution
+2025-08-10 20:46:09,027 - traffic_analysis - INFO - Saved protocol distribution plot to visualization\protocol_distribution.png
+2025-08-10 20:46:09,028 - traffic_analysis - INFO - Plotting congestion over time
+2025-08-10 20:46:09,075 - traffic_analysis - INFO - Saved congestion over time plot to visualization\congestion_over_time.png
+2025-08-10 20:46:09,075 - traffic_analysis - INFO - Performing feature engineering
+2025-08-10 20:46:09,075 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 20:46:09,078 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 20:46:09,081 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 20:46:09,082 - traffic_analysis - INFO - Calculating packet rate
+2025-08-10 20:46:09,295 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 20:46:09,297 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 20:46:09,299 - traffic_analysis - INFO - Saved scaler to models/scaler.pkl
+2025-08-10 20:46:09,299 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 20:46:09,299 - traffic_analysis - INFO - Training the model
+2025-08-10 20:46:09,299 - traffic_analysis - INFO - Starting model training process
+2025-08-10 20:46:09,301 - traffic_analysis - INFO - Splitting data into train and test sets
+2025-08-10 20:46:09,302 - traffic_analysis - INFO - Saved feature dataframe to models/X.pkl
+2025-08-10 20:46:09,302 - traffic_analysis - INFO - Performing time series cross-validation
+2025-08-10 20:46:09,302 - traffic_analysis - INFO - Training on fold
+2025-08-10 20:46:13,707 - traffic_analysis - INFO - New best model found with F1 score: 0.4645
+2025-08-10 20:46:13,707 - traffic_analysis - INFO - Training on fold
+2025-08-10 20:46:19,183 - traffic_analysis - INFO - New best model found with F1 score: 0.5301
+2025-08-10 20:46:19,184 - traffic_analysis - INFO - Training on fold
+2025-08-10 20:46:25,650 - traffic_analysis - INFO - Training on fold
+2025-08-10 20:46:33,464 - traffic_analysis - INFO - Training on fold
+2025-08-10 20:46:42,345 - traffic_analysis - INFO - New best model found with F1 score: 0.5596
+2025-08-10 20:46:42,345 - traffic_analysis - INFO - Evaluating final model on test set
+2025-08-10 20:46:42,350 - traffic_analysis - INFO - Final model metrics:
+2025-08-10 20:46:42,350 - traffic_analysis - INFO - Precision: 0.8911
+2025-08-10 20:46:42,350 - traffic_analysis - INFO - Recall: 0.8738
+2025-08-10 20:46:42,350 - traffic_analysis - INFO - AUC-ROC: 0.8802
+2025-08-10 20:46:42,351 - traffic_analysis - INFO - F1 Score: 0.8824
+2025-08-10 20:46:42,353 - traffic_analysis - INFO - Saved model to models/congestion_model.pkl
+2025-08-10 20:46:42,357 - traffic_analysis - INFO - Saved metrics to models/metrics.json
+2025-08-10 20:46:42,357 - traffic_analysis - INFO - Creating model evaluation visualizations
+2025-08-10 20:46:42,357 - traffic_analysis - INFO - Plotting confusion matrix
+2025-08-10 20:46:42,398 - traffic_analysis - INFO - Saved confusion matrix plot to visualization\confusion_matrix.png
+2025-08-10 20:46:42,399 - traffic_analysis - INFO - Plotting feature importance
+2025-08-10 20:46:42,456 - traffic_analysis - INFO - Saved feature importance plot to visualization\feature_importance.png
+2025-08-10 20:46:42,457 - traffic_analysis - INFO - Pipeline completed successfully
+2025-08-10 20:47:20,576 - traffic_analysis - INFO - Starting prediction process
+2025-08-10 20:47:20,674 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 20:47:20,678 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 20:47:20,678 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 20:47:20,679 - traffic_analysis - INFO - Skipping packet rate calculation for single record
+2025-08-10 20:47:20,680 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 20:47:20,681 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 20:47:20,682 - traffic_analysis - INFO - Loaded scaler from config\..\models/scaler.pkl
+2025-08-10 20:47:20,682 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 20:47:20,687 - traffic_analysis - INFO - Prediction completed: 1 (proba=0.7724409054238301)
+2025-08-10 20:47:45,634 - traffic_analysis - INFO - Starting prediction process
+2025-08-10 20:47:45,639 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 20:47:45,643 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 20:47:45,643 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 20:47:45,645 - traffic_analysis - INFO - Skipping packet rate calculation for single record
+2025-08-10 20:47:45,645 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 20:47:45,647 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 20:47:45,648 - traffic_analysis - INFO - Loaded scaler from config\..\models/scaler.pkl
+2025-08-10 20:47:45,649 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 20:47:45,653 - traffic_analysis - INFO - Prediction completed: 0 (proba=0.4784415696870329)
+2025-08-10 20:47:46,673 - traffic_analysis - INFO - Starting prediction process
+2025-08-10 20:47:46,678 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 20:47:46,681 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 20:47:46,682 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 20:47:46,683 - traffic_analysis - INFO - Skipping packet rate calculation for single record
+2025-08-10 20:47:46,684 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 20:47:46,685 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 20:47:46,686 - traffic_analysis - INFO - Loaded scaler from config\..\models/scaler.pkl
+2025-08-10 20:47:46,687 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 20:47:46,691 - traffic_analysis - INFO - Prediction completed: 0 (proba=0.4784415696870329)
+2025-08-10 20:47:46,929 - traffic_analysis - INFO - Starting prediction process
+2025-08-10 20:47:46,933 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 20:47:46,936 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 20:47:46,936 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 20:47:46,938 - traffic_analysis - INFO - Skipping packet rate calculation for single record
+2025-08-10 20:47:46,939 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 20:47:46,940 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 20:47:46,942 - traffic_analysis - INFO - Loaded scaler from config\..\models/scaler.pkl
+2025-08-10 20:47:46,942 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 20:47:46,946 - traffic_analysis - INFO - Prediction completed: 0 (proba=0.4784415696870329)
+2025-08-10 20:47:47,113 - traffic_analysis - INFO - Starting prediction process
+2025-08-10 20:47:47,118 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 20:47:47,121 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 20:47:47,122 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 20:47:47,123 - traffic_analysis - INFO - Skipping packet rate calculation for single record
+2025-08-10 20:47:47,124 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 20:47:47,125 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 20:47:47,126 - traffic_analysis - INFO - Loaded scaler from config\..\models/scaler.pkl
+2025-08-10 20:47:47,126 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 20:47:47,130 - traffic_analysis - INFO - Prediction completed: 0 (proba=0.4784415696870329)
+2025-08-10 20:51:01,507 - traffic_analysis - INFO - Generating 1000 samples of synthetic traffic data
+2025-08-10 20:51:01,516 - traffic_analysis - INFO - Saved generated data to data/traffic_data.csv
+2025-08-10 20:51:05,229 - traffic_analysis - INFO - Starting traffic analysis pipeline
+2025-08-10 20:51:05,231 - traffic_analysis - INFO - Loading existing data from data/traffic_data.csv
+2025-08-10 20:51:05,245 - traffic_analysis - INFO - Performing exploratory data analysis
+2025-08-10 20:51:05,245 - traffic_analysis - INFO - Plotting class distribution
+2025-08-10 20:51:05,285 - traffic_analysis - INFO - Saved class distribution plot to visualization\class_distribution.png
+2025-08-10 20:51:05,285 - traffic_analysis - INFO - Plotting traffic volume over time
+2025-08-10 20:51:05,347 - traffic_analysis - INFO - Saved traffic volume plot to visualization\traffic_volume.png
+2025-08-10 20:51:05,347 - traffic_analysis - INFO - Plotting protocol distribution
+2025-08-10 20:51:05,376 - traffic_analysis - INFO - Saved protocol distribution plot to visualization\protocol_distribution.png
+2025-08-10 20:51:05,376 - traffic_analysis - INFO - Plotting congestion over time
+2025-08-10 20:51:05,423 - traffic_analysis - INFO - Saved congestion over time plot to visualization\congestion_over_time.png
+2025-08-10 20:51:05,423 - traffic_analysis - INFO - Performing feature engineering
+2025-08-10 20:51:05,423 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 20:51:05,426 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 20:51:05,429 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 20:51:05,430 - traffic_analysis - INFO - Calculating packet rate
+2025-08-10 20:51:05,645 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 20:51:05,647 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 20:51:05,649 - traffic_analysis - INFO - Saved scaler to models/scaler.pkl
+2025-08-10 20:51:05,649 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 20:51:05,649 - traffic_analysis - INFO - Training the model
+2025-08-10 20:51:05,650 - traffic_analysis - INFO - Starting model training process
+2025-08-10 20:51:05,652 - traffic_analysis - INFO - Splitting data into train and test sets
+2025-08-10 20:51:05,653 - traffic_analysis - INFO - Saved feature dataframe to models/X.pkl
+2025-08-10 20:51:05,653 - traffic_analysis - INFO - Performing time series cross-validation
+2025-08-10 20:51:05,653 - traffic_analysis - INFO - Training on fold
+2025-08-10 20:51:10,055 - traffic_analysis - INFO - New best model found with F1 score: 0.4645
+2025-08-10 20:51:10,056 - traffic_analysis - INFO - Training on fold
+2025-08-10 20:51:15,537 - traffic_analysis - INFO - New best model found with F1 score: 0.5301
+2025-08-10 20:51:15,537 - traffic_analysis - INFO - Training on fold
+2025-08-10 20:51:22,258 - traffic_analysis - INFO - Training on fold
+2025-08-10 20:51:30,661 - traffic_analysis - INFO - Training on fold
+2025-08-10 20:51:39,872 - traffic_analysis - INFO - New best model found with F1 score: 0.5596
+2025-08-10 20:51:39,872 - traffic_analysis - INFO - Evaluating final model on test set
+2025-08-10 20:51:39,876 - traffic_analysis - INFO - Final model metrics:
+2025-08-10 20:51:39,876 - traffic_analysis - INFO - Precision: 0.8911
+2025-08-10 20:51:39,876 - traffic_analysis - INFO - Recall: 0.8738
+2025-08-10 20:51:39,876 - traffic_analysis - INFO - AUC-ROC: 0.8802
+2025-08-10 20:51:39,877 - traffic_analysis - INFO - F1 Score: 0.8824
+2025-08-10 20:51:39,879 - traffic_analysis - INFO - Saved model to models/congestion_model.pkl
+2025-08-10 20:51:39,883 - traffic_analysis - INFO - Saved metrics to models/metrics.json
+2025-08-10 20:51:39,884 - traffic_analysis - INFO - Appended metrics to metrics_history.json (size=1)
+2025-08-10 20:51:39,884 - traffic_analysis - INFO - Creating model evaluation visualizations
+2025-08-10 20:51:39,884 - traffic_analysis - INFO - Plotting confusion matrix
+2025-08-10 20:51:39,923 - traffic_analysis - INFO - Saved confusion matrix plot to visualization\confusion_matrix.png
+2025-08-10 20:51:39,923 - traffic_analysis - INFO - Plotting feature importance
+2025-08-10 20:51:39,979 - traffic_analysis - INFO - Saved feature importance plot to visualization\feature_importance.png
+2025-08-10 20:51:39,980 - traffic_analysis - INFO - Pipeline completed successfully
+2025-08-10 20:53:52,206 - traffic_analysis - INFO - Generating 1000 samples of synthetic traffic data
+2025-08-10 20:53:52,214 - traffic_analysis - INFO - Saved generated data to data/traffic_data.csv
+2025-08-10 20:53:56,711 - traffic_analysis - INFO - Starting traffic analysis pipeline
+2025-08-10 20:53:56,714 - traffic_analysis - INFO - Loading existing data from data/traffic_data.csv
+2025-08-10 20:53:56,727 - traffic_analysis - INFO - Performing exploratory data analysis
+2025-08-10 20:53:56,727 - traffic_analysis - INFO - Plotting class distribution
+2025-08-10 20:53:56,768 - traffic_analysis - INFO - Saved class distribution plot to visualization\class_distribution.png
+2025-08-10 20:53:56,768 - traffic_analysis - INFO - Plotting traffic volume over time
+2025-08-10 20:53:56,829 - traffic_analysis - INFO - Saved traffic volume plot to visualization\traffic_volume.png
+2025-08-10 20:53:56,829 - traffic_analysis - INFO - Plotting protocol distribution
+2025-08-10 20:53:56,859 - traffic_analysis - INFO - Saved protocol distribution plot to visualization\protocol_distribution.png
+2025-08-10 20:53:56,859 - traffic_analysis - INFO - Plotting congestion over time
+2025-08-10 20:53:56,906 - traffic_analysis - INFO - Saved congestion over time plot to visualization\congestion_over_time.png
+2025-08-10 20:53:56,907 - traffic_analysis - INFO - Performing feature engineering
+2025-08-10 20:53:56,907 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 20:53:56,910 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 20:53:56,913 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 20:53:56,914 - traffic_analysis - INFO - Calculating packet rate
+2025-08-10 20:53:57,130 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 20:53:57,131 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 20:53:57,133 - traffic_analysis - INFO - Saved scaler to models/scaler.pkl
+2025-08-10 20:53:57,133 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 20:53:57,133 - traffic_analysis - INFO - Training the model
+2025-08-10 20:53:57,134 - traffic_analysis - INFO - Starting model training process
+2025-08-10 20:53:57,136 - traffic_analysis - INFO - Splitting data into train and test sets
+2025-08-10 20:53:57,137 - traffic_analysis - INFO - Saved feature dataframe to models/X.pkl
+2025-08-10 20:53:57,137 - traffic_analysis - INFO - Performing time series cross-validation
+2025-08-10 20:53:57,137 - traffic_analysis - INFO - Training on fold
+2025-08-10 20:54:01,548 - traffic_analysis - INFO - New best model found with F1 score: 0.4645
+2025-08-10 20:54:01,548 - traffic_analysis - INFO - Training on fold
+2025-08-10 20:54:07,017 - traffic_analysis - INFO - New best model found with F1 score: 0.5301
+2025-08-10 20:54:07,017 - traffic_analysis - INFO - Training on fold
+2025-08-10 20:54:13,543 - traffic_analysis - INFO - Training on fold
+2025-08-10 20:54:21,406 - traffic_analysis - INFO - Training on fold
+2025-08-10 20:54:30,340 - traffic_analysis - INFO - New best model found with F1 score: 0.5596
+2025-08-10 20:54:30,340 - traffic_analysis - INFO - Evaluating final model on test set
+2025-08-10 20:54:30,345 - traffic_analysis - INFO - Final model metrics:
+2025-08-10 20:54:30,345 - traffic_analysis - INFO - Precision: 0.8911
+2025-08-10 20:54:30,345 - traffic_analysis - INFO - Recall: 0.8738
+2025-08-10 20:54:30,345 - traffic_analysis - INFO - AUC-ROC: 0.8802
+2025-08-10 20:54:30,346 - traffic_analysis - INFO - F1 Score: 0.8824
+2025-08-10 20:54:30,349 - traffic_analysis - INFO - Saved model to models/congestion_model.pkl
+2025-08-10 20:54:30,352 - traffic_analysis - INFO - Saved metrics to models/metrics.json
+2025-08-10 20:54:30,353 - traffic_analysis - INFO - Appended metrics to metrics_history.json (size=2)
+2025-08-10 20:54:30,353 - traffic_analysis - INFO - Creating model evaluation visualizations
+2025-08-10 20:54:30,353 - traffic_analysis - INFO - Plotting confusion matrix
+2025-08-10 20:54:30,392 - traffic_analysis - INFO - Saved confusion matrix plot to visualization\confusion_matrix.png
+2025-08-10 20:54:30,393 - traffic_analysis - INFO - Plotting feature importance
+2025-08-10 20:54:30,449 - traffic_analysis - INFO - Saved feature importance plot to visualization\feature_importance.png
+2025-08-10 20:54:30,450 - traffic_analysis - INFO - Pipeline completed successfully
+2025-08-10 21:00:06,741 - traffic_analysis - ERROR - Explain error: No module named 'shap'
+2025-08-10 21:00:07,678 - traffic_analysis - ERROR - Explain error: No module named 'shap'
+2025-08-10 21:00:10,045 - traffic_analysis - ERROR - Explain error: No module named 'shap'
+2025-08-10 21:00:18,822 - traffic_analysis - ERROR - Explain error: No module named 'shap'
+2025-08-10 21:00:48,431 - traffic_analysis - INFO - Starting prediction process
+2025-08-10 21:00:48,525 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 21:00:48,528 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 21:00:48,528 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 21:00:48,530 - traffic_analysis - INFO - Skipping packet rate calculation for single record
+2025-08-10 21:00:48,530 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 21:00:48,531 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 21:00:48,532 - traffic_analysis - INFO - Loaded scaler from config\..\models/scaler.pkl
+2025-08-10 21:00:48,532 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 21:00:48,536 - traffic_analysis - INFO - Prediction completed: 0 (proba=0.4784415696870329)
+2025-08-10 21:02:25,094 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 21:02:25,094 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 21:02:25,097 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 21:02:25,097 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 21:02:25,100 - traffic_analysis - INFO - Skipping packet rate calculation for single record
+2025-08-10 21:02:25,101 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 21:02:25,101 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 21:02:25,101 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 21:02:25,103 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 21:02:25,104 - traffic_analysis - INFO - Skipping packet rate calculation for single record
+2025-08-10 21:02:25,104 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 21:02:25,105 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 21:02:25,106 - traffic_analysis - INFO - Loaded scaler from models/scaler.pkl
+2025-08-10 21:02:25,106 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 21:02:25,107 - traffic_analysis - INFO - Loaded scaler from models/scaler.pkl
+2025-08-10 21:02:25,109 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 21:02:25,114 - traffic_analysis - ERROR - Explain error: only length-1 arrays can be converted to Python scalars
+2025-08-10 21:02:25,115 - traffic_analysis - ERROR - Explain error: only length-1 arrays can be converted to Python scalars
+2025-08-10 21:03:29,499 - traffic_analysis - INFO - Starting prediction process
+2025-08-10 21:03:29,581 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 21:03:29,584 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 21:03:29,585 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 21:03:29,586 - traffic_analysis - INFO - Skipping packet rate calculation for single record
+2025-08-10 21:03:29,587 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 21:03:29,588 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 21:03:29,589 - traffic_analysis - INFO - Loaded scaler from config\..\models/scaler.pkl
+2025-08-10 21:03:29,589 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 21:03:29,593 - traffic_analysis - INFO - Prediction completed: 0 (proba=0.4784415696870329)
+2025-08-10 21:04:17,992 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 21:04:17,995 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 21:04:17,996 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 21:04:17,997 - traffic_analysis - INFO - Skipping packet rate calculation for single record
+2025-08-10 21:04:17,998 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 21:04:17,999 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 21:04:18,001 - traffic_analysis - INFO - Loaded scaler from models/scaler.pkl
+2025-08-10 21:04:18,001 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 21:04:18,005 - traffic_analysis - ERROR - Explain error: only length-1 arrays can be converted to Python scalars
+2025-08-10 21:04:18,104 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 21:04:18,106 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 21:04:18,107 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 21:04:18,108 - traffic_analysis - INFO - Skipping packet rate calculation for single record
+2025-08-10 21:04:18,108 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 21:04:18,109 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 21:04:18,110 - traffic_analysis - INFO - Loaded scaler from models/scaler.pkl
+2025-08-10 21:04:18,110 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 21:04:18,113 - traffic_analysis - ERROR - Explain error: only length-1 arrays can be converted to Python scalars
+2025-08-10 21:04:21,072 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 21:04:21,076 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 21:04:21,077 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 21:04:21,078 - traffic_analysis - INFO - Skipping packet rate calculation for single record
+2025-08-10 21:04:21,078 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 21:04:21,079 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 21:04:21,081 - traffic_analysis - INFO - Loaded scaler from models/scaler.pkl
+2025-08-10 21:04:21,081 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 21:04:21,084 - traffic_analysis - ERROR - Explain error: only length-1 arrays can be converted to Python scalars
+2025-08-10 21:04:37,299 - traffic_analysis - INFO - Generating 1000 samples of synthetic traffic data
+2025-08-10 21:04:37,307 - traffic_analysis - INFO - Saved generated data to data/traffic_data.csv
+2025-08-10 21:04:41,822 - traffic_analysis - INFO - Starting traffic analysis pipeline
+2025-08-10 21:04:41,824 - traffic_analysis - INFO - Loading existing data from data/traffic_data.csv
+2025-08-10 21:04:41,836 - traffic_analysis - INFO - Performing exploratory data analysis
+2025-08-10 21:04:41,836 - traffic_analysis - INFO - Plotting class distribution
+2025-08-10 21:04:41,878 - traffic_analysis - INFO - Saved class distribution plot to visualization\class_distribution.png
+2025-08-10 21:04:41,878 - traffic_analysis - INFO - Plotting traffic volume over time
+2025-08-10 21:04:41,940 - traffic_analysis - INFO - Saved traffic volume plot to visualization\traffic_volume.png
+2025-08-10 21:04:41,940 - traffic_analysis - INFO - Plotting protocol distribution
+2025-08-10 21:04:41,969 - traffic_analysis - INFO - Saved protocol distribution plot to visualization\protocol_distribution.png
+2025-08-10 21:04:41,969 - traffic_analysis - INFO - Plotting congestion over time
+2025-08-10 21:04:42,017 - traffic_analysis - INFO - Saved congestion over time plot to visualization\congestion_over_time.png
+2025-08-10 21:04:42,017 - traffic_analysis - INFO - Performing feature engineering
+2025-08-10 21:04:42,018 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 21:04:42,021 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 21:04:42,024 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 21:04:42,025 - traffic_analysis - INFO - Calculating packet rate
+2025-08-10 21:04:42,241 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 21:04:42,243 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 21:04:42,245 - traffic_analysis - INFO - Saved scaler to models/scaler.pkl
+2025-08-10 21:04:42,245 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 21:04:42,245 - traffic_analysis - INFO - Training the model
+2025-08-10 21:04:42,246 - traffic_analysis - INFO - Starting model training process
+2025-08-10 21:04:42,248 - traffic_analysis - INFO - Splitting data into train and test sets
+2025-08-10 21:04:42,249 - traffic_analysis - INFO - Saved feature dataframe to models/X.pkl
+2025-08-10 21:04:42,249 - traffic_analysis - INFO - Performing time series cross-validation
+2025-08-10 21:04:42,249 - traffic_analysis - INFO - Training on fold
+2025-08-10 21:04:46,675 - traffic_analysis - INFO - New best model found with F1 score: 0.4645
+2025-08-10 21:04:46,675 - traffic_analysis - INFO - Training on fold
+2025-08-10 21:04:52,204 - traffic_analysis - INFO - New best model found with F1 score: 0.5301
+2025-08-10 21:04:52,204 - traffic_analysis - INFO - Training on fold
+2025-08-10 21:04:58,661 - traffic_analysis - INFO - Training on fold
+2025-08-10 21:05:06,526 - traffic_analysis - INFO - Training on fold
+2025-08-10 21:05:15,442 - traffic_analysis - INFO - New best model found with F1 score: 0.5596
+2025-08-10 21:05:15,442 - traffic_analysis - INFO - Evaluating final model on test set
+2025-08-10 21:05:15,447 - traffic_analysis - INFO - Final model metrics:
+2025-08-10 21:05:15,447 - traffic_analysis - INFO - Precision: 0.8911
+2025-08-10 21:05:15,447 - traffic_analysis - INFO - Recall: 0.8738
+2025-08-10 21:05:15,447 - traffic_analysis - INFO - AUC-ROC: 0.8802
+2025-08-10 21:05:15,448 - traffic_analysis - INFO - F1 Score: 0.8824
+2025-08-10 21:05:15,450 - traffic_analysis - INFO - Saved model to models/congestion_model.pkl
+2025-08-10 21:05:15,453 - traffic_analysis - INFO - Saved metrics to models/metrics.json
+2025-08-10 21:05:15,454 - traffic_analysis - INFO - Appended metrics to metrics_history.json (size=3)
+2025-08-10 21:05:15,454 - traffic_analysis - INFO - Creating model evaluation visualizations
+2025-08-10 21:05:15,454 - traffic_analysis - INFO - Plotting confusion matrix
+2025-08-10 21:05:15,493 - traffic_analysis - INFO - Saved confusion matrix plot to visualization\confusion_matrix.png
+2025-08-10 21:05:15,494 - traffic_analysis - INFO - Plotting feature importance
+2025-08-10 21:05:15,551 - traffic_analysis - INFO - Saved feature importance plot to visualization\feature_importance.png
+2025-08-10 21:05:15,551 - traffic_analysis - INFO - Pipeline completed successfully
+2025-08-10 21:05:29,815 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 21:05:29,818 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 21:05:29,818 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 21:05:29,820 - traffic_analysis - INFO - Skipping packet rate calculation for single record
+2025-08-10 21:05:29,820 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 21:05:29,822 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 21:05:29,824 - traffic_analysis - INFO - Loaded scaler from models/scaler.pkl
+2025-08-10 21:05:29,824 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 21:05:29,827 - traffic_analysis - ERROR - Explain error: only length-1 arrays can be converted to Python scalars
+2025-08-10 21:06:14,932 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 21:06:14,936 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 21:06:14,937 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 21:06:14,938 - traffic_analysis - INFO - Skipping packet rate calculation for single record
+2025-08-10 21:06:14,939 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 21:06:14,940 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 21:06:14,941 - traffic_analysis - INFO - Loaded scaler from models/scaler.pkl
+2025-08-10 21:06:14,941 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 21:06:14,945 - traffic_analysis - ERROR - Explain error: Object of type Index is not JSON serializable
+2025-08-10 21:07:47,717 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 21:07:47,720 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 21:07:47,720 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 21:07:47,722 - traffic_analysis - INFO - Skipping packet rate calculation for single record
+2025-08-10 21:07:47,722 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 21:07:47,723 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 21:07:47,725 - traffic_analysis - INFO - Loaded scaler from models/scaler.pkl
+2025-08-10 21:07:47,725 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 21:09:35,273 - traffic_analysis - INFO - Starting traffic analysis pipeline
+2025-08-10 21:09:35,275 - traffic_analysis - INFO - Loading existing data from data/traffic_data.csv
+2025-08-10 21:09:35,279 - traffic_analysis - INFO - Performing exploratory data analysis
+2025-08-10 21:09:35,279 - traffic_analysis - INFO - Plotting class distribution
+2025-08-10 21:09:35,319 - traffic_analysis - INFO - Saved class distribution plot to visualization\class_distribution.png
+2025-08-10 21:09:35,319 - traffic_analysis - INFO - Plotting traffic volume over time
+2025-08-10 21:09:35,380 - traffic_analysis - INFO - Saved traffic volume plot to visualization\traffic_volume.png
+2025-08-10 21:09:35,381 - traffic_analysis - INFO - Plotting protocol distribution
+2025-08-10 21:09:35,410 - traffic_analysis - INFO - Saved protocol distribution plot to visualization\protocol_distribution.png
+2025-08-10 21:09:35,410 - traffic_analysis - INFO - Plotting congestion over time
+2025-08-10 21:09:35,457 - traffic_analysis - INFO - Saved congestion over time plot to visualization\congestion_over_time.png
+2025-08-10 21:09:35,457 - traffic_analysis - INFO - Performing feature engineering
+2025-08-10 21:09:35,457 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 21:09:35,461 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 21:09:35,464 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 21:09:35,465 - traffic_analysis - INFO - Calculating packet rate
+2025-08-10 21:09:35,683 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 21:09:35,685 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 21:09:35,687 - traffic_analysis - INFO - Saved scaler to models/scaler.pkl
+2025-08-10 21:09:35,687 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 21:09:35,688 - traffic_analysis - INFO - Training the model
+2025-08-10 21:09:35,688 - traffic_analysis - INFO - Starting model training process
+2025-08-10 21:09:35,690 - traffic_analysis - INFO - Splitting data into train and test sets
+2025-08-10 21:09:35,691 - traffic_analysis - INFO - Saved feature dataframe to models/X.pkl
+2025-08-10 21:09:35,691 - traffic_analysis - INFO - Performing time series cross-validation
+2025-08-10 21:09:35,691 - traffic_analysis - INFO - Training on fold
+2025-08-10 21:09:40,110 - traffic_analysis - INFO - New best model found with F1 score: 0.4645
+2025-08-10 21:09:40,110 - traffic_analysis - INFO - Training on fold
+2025-08-10 21:09:45,579 - traffic_analysis - INFO - New best model found with F1 score: 0.5301
+2025-08-10 21:09:45,579 - traffic_analysis - INFO - Training on fold
+2025-08-10 21:09:51,984 - traffic_analysis - INFO - Training on fold
+2025-08-10 21:09:59,838 - traffic_analysis - INFO - Training on fold
+2025-08-10 21:10:08,699 - traffic_analysis - INFO - New best model found with F1 score: 0.5596
+2025-08-10 21:10:08,699 - traffic_analysis - INFO - Evaluating final model on test set
+2025-08-10 21:10:08,703 - traffic_analysis - INFO - Final model metrics:
+2025-08-10 21:10:08,703 - traffic_analysis - INFO - Precision: 0.8911
+2025-08-10 21:10:08,703 - traffic_analysis - INFO - Recall: 0.8738
+2025-08-10 21:10:08,703 - traffic_analysis - INFO - AUC-ROC: 0.8802
+2025-08-10 21:10:08,705 - traffic_analysis - INFO - F1 Score: 0.8824
+2025-08-10 21:10:08,707 - traffic_analysis - INFO - Saved model to models/congestion_model.pkl
+2025-08-10 21:10:08,711 - traffic_analysis - INFO - Saved metrics to models/metrics.json
+2025-08-10 21:10:08,712 - traffic_analysis - INFO - Appended metrics to metrics_history.json (size=4)
+2025-08-10 21:10:08,713 - traffic_analysis - INFO - Creating model evaluation visualizations
+2025-08-10 21:10:08,713 - traffic_analysis - INFO - Plotting confusion matrix
+2025-08-10 21:10:08,752 - traffic_analysis - INFO - Saved confusion matrix plot to visualization\confusion_matrix.png
+2025-08-10 21:10:08,752 - traffic_analysis - INFO - Plotting feature importance
+2025-08-10 21:10:08,809 - traffic_analysis - INFO - Saved feature importance plot to visualization\feature_importance.png
+2025-08-10 21:10:09,302 - traffic_analysis - INFO - Saved global SHAP importance to models/shap_global.json
+2025-08-10 21:10:09,302 - traffic_analysis - INFO - Pipeline completed successfully
+2025-08-10 21:10:24,153 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 21:10:24,156 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 21:10:24,157 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 21:10:24,158 - traffic_analysis - INFO - Skipping packet rate calculation for single record
+2025-08-10 21:10:24,158 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 21:10:24,159 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 21:10:24,161 - traffic_analysis - INFO - Loaded scaler from models/scaler.pkl
+2025-08-10 21:10:24,161 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 21:10:35,179 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 21:10:35,182 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 21:10:35,183 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 21:10:35,184 - traffic_analysis - INFO - Skipping packet rate calculation for single record
+2025-08-10 21:10:35,184 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 21:10:35,185 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 21:10:35,186 - traffic_analysis - INFO - Loaded scaler from models/scaler.pkl
+2025-08-10 21:10:35,187 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 21:10:35,770 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 21:10:35,773 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 21:10:35,774 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 21:10:35,775 - traffic_analysis - INFO - Skipping packet rate calculation for single record
+2025-08-10 21:10:35,775 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 21:10:35,776 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 21:10:35,778 - traffic_analysis - INFO - Loaded scaler from models/scaler.pkl
+2025-08-10 21:10:35,778 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 21:10:36,955 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 21:10:36,959 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 21:10:36,959 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 21:10:36,960 - traffic_analysis - INFO - Skipping packet rate calculation for single record
+2025-08-10 21:10:36,961 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 21:10:36,962 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 21:10:36,963 - traffic_analysis - INFO - Loaded scaler from models/scaler.pkl
+2025-08-10 21:10:36,964 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 21:13:36,356 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 21:13:36,359 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 21:13:36,360 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 21:13:36,361 - traffic_analysis - INFO - Skipping packet rate calculation for single record
+2025-08-10 21:13:36,362 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 21:13:36,363 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 21:13:36,365 - traffic_analysis - INFO - Loaded scaler from models/scaler.pkl
+2025-08-10 21:13:36,365 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 21:13:45,248 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 21:13:45,251 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 21:13:45,252 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 21:13:45,253 - traffic_analysis - INFO - Skipping packet rate calculation for single record
+2025-08-10 21:13:45,254 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 21:13:45,255 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 21:13:45,257 - traffic_analysis - INFO - Loaded scaler from models/scaler.pkl
+2025-08-10 21:13:45,257 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 21:13:45,872 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 21:13:45,875 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 21:13:45,876 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 21:13:45,877 - traffic_analysis - INFO - Skipping packet rate calculation for single record
+2025-08-10 21:13:45,878 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 21:13:45,879 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 21:13:45,880 - traffic_analysis - INFO - Loaded scaler from models/scaler.pkl
+2025-08-10 21:13:45,880 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 21:13:46,142 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 21:13:46,145 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 21:13:46,146 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 21:13:46,147 - traffic_analysis - INFO - Skipping packet rate calculation for single record
+2025-08-10 21:13:46,148 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 21:13:46,149 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 21:13:46,151 - traffic_analysis - INFO - Loaded scaler from models/scaler.pkl
+2025-08-10 21:13:46,151 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 21:13:46,335 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 21:13:46,338 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 21:13:46,339 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 21:13:46,340 - traffic_analysis - INFO - Skipping packet rate calculation for single record
+2025-08-10 21:13:46,340 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 21:13:46,342 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 21:13:46,344 - traffic_analysis - INFO - Loaded scaler from models/scaler.pkl
+2025-08-10 21:13:46,344 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 21:13:55,252 - traffic_analysis - INFO - Starting prediction process
+2025-08-10 21:13:55,256 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 21:13:55,260 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 21:13:55,260 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 21:13:55,262 - traffic_analysis - INFO - Skipping packet rate calculation for single record
+2025-08-10 21:13:55,263 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 21:13:55,264 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 21:13:55,266 - traffic_analysis - INFO - Loaded scaler from config\..\models/scaler.pkl
+2025-08-10 21:13:55,266 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 21:13:55,270 - traffic_analysis - INFO - Prediction completed: 0 (proba=0.4784415696870329)
+2025-08-10 21:15:22,472 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 21:15:22,475 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 21:15:22,475 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 21:15:22,477 - traffic_analysis - INFO - Skipping packet rate calculation for single record
+2025-08-10 21:15:22,478 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 21:15:22,479 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 21:15:22,480 - traffic_analysis - INFO - Loaded scaler from models/scaler.pkl
+2025-08-10 21:15:22,480 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 21:15:27,082 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 21:15:27,085 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 21:15:27,086 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 21:15:27,087 - traffic_analysis - INFO - Skipping packet rate calculation for single record
+2025-08-10 21:15:27,088 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 21:15:27,089 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 21:15:27,090 - traffic_analysis - INFO - Loaded scaler from models/scaler.pkl
+2025-08-10 21:15:27,090 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 21:25:15,723 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 21:25:15,726 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 21:25:15,726 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 21:25:15,727 - traffic_analysis - INFO - Skipping packet rate calculation for single record
+2025-08-10 21:25:15,727 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 21:25:15,728 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 21:25:15,729 - traffic_analysis - INFO - Loaded scaler from models/scaler.pkl
+2025-08-10 21:25:15,729 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 21:27:37,523 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 21:27:37,526 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 21:27:37,527 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 21:27:37,529 - traffic_analysis - INFO - Skipping packet rate calculation for single record
+2025-08-10 21:27:37,529 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 21:27:37,531 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 21:27:37,532 - traffic_analysis - INFO - Loaded scaler from models/scaler.pkl
+2025-08-10 21:27:37,532 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 21:28:21,328 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 21:28:21,331 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 21:28:21,332 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 21:28:21,333 - traffic_analysis - INFO - Skipping packet rate calculation for single record
+2025-08-10 21:28:21,333 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 21:28:21,334 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 21:28:21,335 - traffic_analysis - INFO - Loaded scaler from models/scaler.pkl
+2025-08-10 21:28:21,335 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 21:29:44,599 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 21:29:44,602 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 21:29:44,603 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 21:29:44,604 - traffic_analysis - INFO - Skipping packet rate calculation for single record
+2025-08-10 21:29:44,605 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 21:29:44,606 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 21:29:44,607 - traffic_analysis - INFO - Loaded scaler from models/scaler.pkl
+2025-08-10 21:29:44,607 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 21:30:02,478 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 21:30:02,481 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 21:30:02,482 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 21:30:02,483 - traffic_analysis - INFO - Skipping packet rate calculation for single record
+2025-08-10 21:30:02,483 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 21:30:02,485 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 21:30:02,486 - traffic_analysis - INFO - Loaded scaler from models/scaler.pkl
+2025-08-10 21:30:02,487 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 21:40:42,236 - traffic_analysis - INFO - Starting prediction process
+2025-08-10 21:40:42,317 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 21:40:42,320 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 21:40:42,321 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 21:40:42,322 - traffic_analysis - INFO - Skipping packet rate calculation for single record
+2025-08-10 21:40:42,323 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 21:40:42,324 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 21:40:42,326 - traffic_analysis - INFO - Loaded scaler from config\..\models/scaler.pkl
+2025-08-10 21:40:42,326 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 21:40:42,330 - traffic_analysis - INFO - Prediction completed: 1 (proba=0.5705034038171132)
+2025-08-10 21:40:47,612 - traffic_analysis - INFO - Starting prediction process
+2025-08-10 21:40:47,617 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 21:40:47,620 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 21:40:47,621 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 21:40:47,622 - traffic_analysis - INFO - Skipping packet rate calculation for single record
+2025-08-10 21:40:47,623 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 21:40:47,625 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 21:40:47,626 - traffic_analysis - INFO - Loaded scaler from config\..\models/scaler.pkl
+2025-08-10 21:40:47,626 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 21:40:47,630 - traffic_analysis - INFO - Prediction completed: 1 (proba=0.7196630404425344)
+2025-08-10 21:40:50,759 - traffic_analysis - INFO - Starting prediction process
+2025-08-10 21:40:50,764 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 21:40:50,767 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 21:40:50,768 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 21:40:50,769 - traffic_analysis - INFO - Skipping packet rate calculation for single record
+2025-08-10 21:40:50,769 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 21:40:50,771 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 21:40:50,772 - traffic_analysis - INFO - Loaded scaler from config\..\models/scaler.pkl
+2025-08-10 21:40:50,772 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 21:40:50,777 - traffic_analysis - INFO - Prediction completed: 0 (proba=0.4784415696870329)
+2025-08-10 21:40:58,042 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 21:40:58,045 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 21:40:58,046 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 21:40:58,047 - traffic_analysis - INFO - Skipping packet rate calculation for single record
+2025-08-10 21:40:58,047 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 21:40:58,049 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 21:40:58,050 - traffic_analysis - INFO - Loaded scaler from models/scaler.pkl
+2025-08-10 21:40:58,050 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 21:41:08,535 - traffic_analysis - INFO - Starting traffic analysis pipeline
+2025-08-10 21:41:08,538 - traffic_analysis - INFO - Loading existing data from data/traffic_data.csv
+2025-08-10 21:41:08,541 - traffic_analysis - INFO - Performing exploratory data analysis
+2025-08-10 21:41:08,541 - traffic_analysis - INFO - Plotting class distribution
+2025-08-10 21:41:08,581 - traffic_analysis - INFO - Saved class distribution plot to visualization\class_distribution.png
+2025-08-10 21:41:08,581 - traffic_analysis - INFO - Plotting traffic volume over time
+2025-08-10 21:41:08,644 - traffic_analysis - INFO - Saved traffic volume plot to visualization\traffic_volume.png
+2025-08-10 21:41:08,644 - traffic_analysis - INFO - Plotting protocol distribution
+2025-08-10 21:41:08,673 - traffic_analysis - INFO - Saved protocol distribution plot to visualization\protocol_distribution.png
+2025-08-10 21:41:08,673 - traffic_analysis - INFO - Plotting congestion over time
+2025-08-10 21:41:08,726 - traffic_analysis - INFO - Saved congestion over time plot to visualization\congestion_over_time.png
+2025-08-10 21:41:08,726 - traffic_analysis - INFO - Performing feature engineering
+2025-08-10 21:41:08,726 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 21:41:08,729 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 21:41:08,733 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 21:41:08,734 - traffic_analysis - INFO - Calculating packet rate
+2025-08-10 21:41:08,968 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 21:41:08,970 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 21:41:08,973 - traffic_analysis - INFO - Saved scaler to models/scaler.pkl
+2025-08-10 21:41:08,973 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 21:41:08,973 - traffic_analysis - INFO - Training the model
+2025-08-10 21:41:08,974 - traffic_analysis - INFO - Starting model training process
+2025-08-10 21:41:08,976 - traffic_analysis - INFO - Splitting data into train and test sets
+2025-08-10 21:41:08,977 - traffic_analysis - INFO - Saved feature dataframe to models/X.pkl
+2025-08-10 21:41:08,977 - traffic_analysis - INFO - Performing time series cross-validation
+2025-08-10 21:41:08,978 - traffic_analysis - INFO - Training on fold
+2025-08-10 21:41:14,733 - traffic_analysis - INFO - New best model found with F1 score: 0.4645
+2025-08-10 21:41:14,733 - traffic_analysis - INFO - Training on fold
+2025-08-10 21:41:21,277 - traffic_analysis - INFO - New best model found with F1 score: 0.5301
+2025-08-10 21:41:21,277 - traffic_analysis - INFO - Training on fold
+2025-08-10 21:41:27,903 - traffic_analysis - INFO - Training on fold
+2025-08-10 21:41:36,387 - traffic_analysis - INFO - Training on fold
+2025-08-10 21:41:45,610 - traffic_analysis - INFO - New best model found with F1 score: 0.5596
+2025-08-10 21:41:45,610 - traffic_analysis - INFO - Evaluating final model on test set
+2025-08-10 21:41:45,615 - traffic_analysis - INFO - Final model metrics:
+2025-08-10 21:41:45,615 - traffic_analysis - INFO - Precision: 0.8911
+2025-08-10 21:41:45,615 - traffic_analysis - INFO - Recall: 0.8738
+2025-08-10 21:41:45,615 - traffic_analysis - INFO - AUC-ROC: 0.8802
+2025-08-10 21:41:45,616 - traffic_analysis - INFO - F1 Score: 0.8824
+2025-08-10 21:41:45,618 - traffic_analysis - INFO - Saved model to models/congestion_model.pkl
+2025-08-10 21:41:45,622 - traffic_analysis - INFO - Saved metrics to models/metrics.json
+2025-08-10 21:41:45,622 - traffic_analysis - INFO - Appended metrics to metrics_history.json (size=5)
+2025-08-10 21:41:45,623 - traffic_analysis - INFO - Creating model evaluation visualizations
+2025-08-10 21:41:45,623 - traffic_analysis - INFO - Plotting confusion matrix
+2025-08-10 21:41:45,662 - traffic_analysis - INFO - Saved confusion matrix plot to visualization\confusion_matrix.png
+2025-08-10 21:41:45,663 - traffic_analysis - INFO - Plotting feature importance
+2025-08-10 21:41:45,718 - traffic_analysis - INFO - Saved feature importance plot to visualization\feature_importance.png
+2025-08-10 21:41:46,036 - traffic_analysis - INFO - Saved global SHAP importance to models/shap_global.json
+2025-08-10 21:41:46,036 - traffic_analysis - INFO - Pipeline completed successfully
+2025-08-10 21:41:59,993 - traffic_analysis - INFO - Starting traffic analysis pipeline
+2025-08-10 21:41:59,995 - traffic_analysis - INFO - Generating new traffic data
+2025-08-10 21:41:59,995 - traffic_analysis - INFO - Generating 1000 samples of synthetic traffic data
+2025-08-10 21:42:00,003 - traffic_analysis - INFO - Saved generated data to data/traffic_data.csv
+2025-08-10 21:42:00,003 - traffic_analysis - INFO - Performing exploratory data analysis
+2025-08-10 21:42:00,003 - traffic_analysis - INFO - Plotting class distribution
+2025-08-10 21:42:00,041 - traffic_analysis - INFO - Saved class distribution plot to visualization\class_distribution.png
+2025-08-10 21:42:00,042 - traffic_analysis - INFO - Plotting traffic volume over time
+2025-08-10 21:42:00,114 - traffic_analysis - INFO - Saved traffic volume plot to visualization\traffic_volume.png
+2025-08-10 21:42:00,114 - traffic_analysis - INFO - Plotting protocol distribution
+2025-08-10 21:42:00,146 - traffic_analysis - INFO - Saved protocol distribution plot to visualization\protocol_distribution.png
+2025-08-10 21:42:00,146 - traffic_analysis - INFO - Plotting congestion over time
+2025-08-10 21:42:00,197 - traffic_analysis - INFO - Saved congestion over time plot to visualization\congestion_over_time.png
+2025-08-10 21:42:00,197 - traffic_analysis - INFO - Performing feature engineering
+2025-08-10 21:42:00,197 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 21:42:00,200 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 21:42:00,203 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 21:42:00,205 - traffic_analysis - INFO - Calculating packet rate
+2025-08-10 21:42:00,502 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 21:42:00,504 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 21:42:00,506 - traffic_analysis - INFO - Saved scaler to models/scaler.pkl
+2025-08-10 21:42:00,506 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 21:42:00,506 - traffic_analysis - INFO - Training the model
+2025-08-10 21:42:00,507 - traffic_analysis - INFO - Starting model training process
+2025-08-10 21:42:00,509 - traffic_analysis - INFO - Splitting data into train and test sets
+2025-08-10 21:42:00,511 - traffic_analysis - INFO - Saved feature dataframe to models/X.pkl
+2025-08-10 21:42:00,511 - traffic_analysis - INFO - Performing time series cross-validation
+2025-08-10 21:42:00,512 - traffic_analysis - INFO - Training on fold
+2025-08-10 21:42:05,014 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 21:42:05,019 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 21:42:05,020 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 21:42:05,022 - traffic_analysis - INFO - Skipping packet rate calculation for single record
+2025-08-10 21:42:05,023 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 21:42:05,028 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 21:42:05,032 - traffic_analysis - INFO - Loaded scaler from models/scaler.pkl
+2025-08-10 21:42:05,033 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 21:42:06,496 - traffic_analysis - INFO - New best model found with F1 score: 0.4645
+2025-08-10 21:42:06,496 - traffic_analysis - INFO - Training on fold
+2025-08-10 21:42:13,274 - traffic_analysis - INFO - New best model found with F1 score: 0.5301
+2025-08-10 21:42:13,274 - traffic_analysis - INFO - Training on fold
+2025-08-10 21:42:20,944 - traffic_analysis - INFO - Training on fold
+2025-08-10 21:42:28,943 - traffic_analysis - INFO - Training on fold
+2025-08-10 21:42:38,125 - traffic_analysis - INFO - New best model found with F1 score: 0.5596
+2025-08-10 21:42:38,125 - traffic_analysis - INFO - Evaluating final model on test set
+2025-08-10 21:42:38,129 - traffic_analysis - INFO - Final model metrics:
+2025-08-10 21:42:38,129 - traffic_analysis - INFO - Precision: 0.8911
+2025-08-10 21:42:38,129 - traffic_analysis - INFO - Recall: 0.8738
+2025-08-10 21:42:38,129 - traffic_analysis - INFO - AUC-ROC: 0.8802
+2025-08-10 21:42:38,130 - traffic_analysis - INFO - F1 Score: 0.8824
+2025-08-10 21:42:38,132 - traffic_analysis - INFO - Saved model to models/congestion_model.pkl
+2025-08-10 21:42:38,136 - traffic_analysis - INFO - Saved metrics to models/metrics.json
+2025-08-10 21:42:38,137 - traffic_analysis - INFO - Appended metrics to metrics_history.json (size=6)
+2025-08-10 21:42:38,137 - traffic_analysis - INFO - Creating model evaluation visualizations
+2025-08-10 21:42:38,137 - traffic_analysis - INFO - Plotting confusion matrix
+2025-08-10 21:42:38,176 - traffic_analysis - INFO - Saved confusion matrix plot to visualization\confusion_matrix.png
+2025-08-10 21:42:38,177 - traffic_analysis - INFO - Plotting feature importance
+2025-08-10 21:42:38,233 - traffic_analysis - INFO - Saved feature importance plot to visualization\feature_importance.png
+2025-08-10 21:42:38,548 - traffic_analysis - INFO - Saved global SHAP importance to models/shap_global.json
+2025-08-10 21:42:38,548 - traffic_analysis - INFO - Pipeline completed successfully
+2025-08-10 21:43:23,638 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 21:43:23,641 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 21:43:23,642 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 21:43:23,643 - traffic_analysis - INFO - Skipping packet rate calculation for single record
+2025-08-10 21:43:23,644 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 21:43:23,645 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 21:43:23,647 - traffic_analysis - INFO - Loaded scaler from models/scaler.pkl
+2025-08-10 21:43:23,647 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 21:43:37,584 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 21:43:37,589 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 21:43:37,590 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 21:43:37,592 - traffic_analysis - INFO - Skipping packet rate calculation for single record
+2025-08-10 21:43:37,592 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 21:43:37,594 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 21:43:37,595 - traffic_analysis - INFO - Loaded scaler from models/scaler.pkl
+2025-08-10 21:43:37,595 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 21:43:43,782 - traffic_analysis - INFO - Starting prediction process
+2025-08-10 21:43:43,786 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 21:43:43,790 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 21:43:43,791 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 21:43:43,792 - traffic_analysis - INFO - Skipping packet rate calculation for single record
+2025-08-10 21:43:43,793 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 21:43:43,794 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 21:43:43,796 - traffic_analysis - INFO - Loaded scaler from config\..\models/scaler.pkl
+2025-08-10 21:43:43,796 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 21:43:43,799 - traffic_analysis - INFO - Prediction completed: 0 (proba=0.4784415696870329)
+2025-08-10 21:45:51,976 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 21:45:51,980 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 21:45:51,980 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 21:45:51,982 - traffic_analysis - INFO - Skipping packet rate calculation for single record
+2025-08-10 21:45:51,982 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 21:45:51,984 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 21:45:51,985 - traffic_analysis - INFO - Loaded scaler from models/scaler.pkl
+2025-08-10 21:45:51,985 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 21:46:01,086 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 21:46:01,089 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 21:46:01,091 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 21:46:01,093 - traffic_analysis - INFO - Calculating packet rate
+2025-08-10 21:46:01,343 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 21:46:01,345 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 21:46:01,347 - traffic_analysis - INFO - Saved scaler to models/scaler.pkl
+2025-08-10 21:46:01,348 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 21:46:01,348 - traffic_analysis - INFO - Starting model training process
+2025-08-10 21:46:01,350 - traffic_analysis - INFO - Splitting data into train and test sets
+2025-08-10 21:46:01,352 - traffic_analysis - INFO - Saved feature dataframe to models/X.pkl
+2025-08-10 21:46:01,352 - traffic_analysis - INFO - Performing time series cross-validation
+2025-08-10 21:46:01,353 - traffic_analysis - INFO - Training on fold
+2025-08-10 21:46:06,028 - traffic_analysis - INFO - New best model found with F1 score: 0.4645
+2025-08-10 21:46:06,028 - traffic_analysis - INFO - Training on fold
+2025-08-10 21:46:11,758 - traffic_analysis - INFO - New best model found with F1 score: 0.5301
+2025-08-10 21:46:11,758 - traffic_analysis - INFO - Training on fold
+2025-08-10 21:46:18,317 - traffic_analysis - INFO - Training on fold
+2025-08-10 21:46:26,322 - traffic_analysis - INFO - Training on fold
+2025-08-10 21:46:35,718 - traffic_analysis - INFO - New best model found with F1 score: 0.5596
+2025-08-10 21:46:35,718 - traffic_analysis - INFO - Evaluating final model on test set
+2025-08-10 21:46:35,723 - traffic_analysis - INFO - Final model metrics:
+2025-08-10 21:46:35,723 - traffic_analysis - INFO - Precision: 0.8911
+2025-08-10 21:46:35,723 - traffic_analysis - INFO - Recall: 0.8738
+2025-08-10 21:46:35,724 - traffic_analysis - INFO - AUC-ROC: 0.8802
+2025-08-10 21:46:35,725 - traffic_analysis - INFO - F1 Score: 0.8824
+2025-08-10 21:46:35,728 - traffic_analysis - INFO - Saved model to models/congestion_model.pkl
+2025-08-10 21:49:14,131 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 21:49:14,134 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 21:49:14,134 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 21:49:14,135 - traffic_analysis - INFO - Skipping packet rate calculation for single record
+2025-08-10 21:49:14,135 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 21:49:14,136 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 21:49:14,137 - traffic_analysis - INFO - Loaded scaler from models/scaler.pkl
+2025-08-10 21:49:14,137 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 21:49:28,379 - traffic_analysis - INFO - Starting prediction process
+2025-08-10 21:49:28,384 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 21:49:28,387 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 21:49:28,387 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 21:49:28,388 - traffic_analysis - INFO - Skipping packet rate calculation for single record
+2025-08-10 21:49:28,388 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 21:49:28,390 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 21:49:28,391 - traffic_analysis - INFO - Loaded scaler from config\..\models/scaler.pkl
+2025-08-10 21:49:28,392 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 21:49:28,395 - traffic_analysis - INFO - Prediction completed: 1 (proba=0.5705034038171132)
+2025-08-10 21:50:44,913 - traffic_analysis - INFO - Starting prediction process
+2025-08-10 21:50:44,995 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 21:50:44,998 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 21:50:44,999 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 21:50:45,000 - traffic_analysis - INFO - Skipping packet rate calculation for single record
+2025-08-10 21:50:45,000 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 21:50:45,002 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 21:50:45,003 - traffic_analysis - INFO - Loaded scaler from config\..\models/scaler.pkl
+2025-08-10 21:50:45,003 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 21:50:45,007 - traffic_analysis - INFO - Prediction completed: 1 (proba=0.5705034038171132)
+2025-08-10 21:51:13,514 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 21:51:13,517 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 21:51:13,517 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 21:51:13,518 - traffic_analysis - INFO - Skipping packet rate calculation for single record
+2025-08-10 21:51:13,519 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 21:51:13,521 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 21:51:13,522 - traffic_analysis - INFO - Loaded scaler from models/scaler.pkl
+2025-08-10 21:51:13,523 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 21:51:16,928 - traffic_analysis - INFO - Generating 1000 samples of synthetic traffic data
+2025-08-10 21:51:16,937 - traffic_analysis - INFO - Saved generated data to data/traffic_data.csv
+2025-08-10 21:51:16,937 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 21:51:16,941 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 21:51:16,945 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 21:51:16,946 - traffic_analysis - INFO - Calculating packet rate
+2025-08-10 21:51:17,176 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 21:51:17,177 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 21:51:17,180 - traffic_analysis - INFO - Saved scaler to models/scaler.pkl
+2025-08-10 21:51:17,180 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 21:51:17,181 - traffic_analysis - INFO - Starting model training process
+2025-08-10 21:51:17,184 - traffic_analysis - INFO - Splitting data into train and test sets
+2025-08-10 21:51:17,185 - traffic_analysis - INFO - Saved feature dataframe to models/X.pkl
+2025-08-10 21:51:17,185 - traffic_analysis - INFO - Performing time series cross-validation
+2025-08-10 21:51:17,186 - traffic_analysis - INFO - Training on fold
+2025-08-10 21:51:23,101 - traffic_analysis - INFO - New best model found with F1 score: 0.4645
+2025-08-10 21:51:23,101 - traffic_analysis - INFO - Training on fold
+2025-08-10 21:51:29,871 - traffic_analysis - INFO - New best model found with F1 score: 0.5301
+2025-08-10 21:51:29,872 - traffic_analysis - INFO - Training on fold
+2025-08-10 21:51:36,803 - traffic_analysis - INFO - Training on fold
+2025-08-10 21:51:44,797 - traffic_analysis - INFO - Training on fold
+2025-08-10 21:51:54,006 - traffic_analysis - INFO - New best model found with F1 score: 0.5596
+2025-08-10 21:51:54,006 - traffic_analysis - INFO - Evaluating final model on test set
+2025-08-10 21:51:54,012 - traffic_analysis - INFO - Final model metrics:
+2025-08-10 21:51:54,012 - traffic_analysis - INFO - Precision: 0.8911
+2025-08-10 21:51:54,012 - traffic_analysis - INFO - Recall: 0.8738
+2025-08-10 21:51:54,013 - traffic_analysis - INFO - AUC-ROC: 0.8802
+2025-08-10 21:51:54,014 - traffic_analysis - INFO - F1 Score: 0.8824
+2025-08-10 21:51:54,016 - traffic_analysis - INFO - Saved model to models/congestion_model.pkl
+2025-08-10 21:52:04,796 - traffic_analysis - INFO - Generating 1000 samples of synthetic traffic data
+2025-08-10 21:52:04,804 - traffic_analysis - INFO - Saved generated data to data/traffic_data.csv
+2025-08-10 21:52:13,532 - traffic_analysis - INFO - Generating 1000 samples of synthetic traffic data
+2025-08-10 21:52:13,541 - traffic_analysis - INFO - Saved generated data to data/traffic_data.csv
+2025-08-10 21:52:16,708 - traffic_analysis - INFO - Generating 1000 samples of synthetic traffic data
+2025-08-10 21:52:16,718 - traffic_analysis - INFO - Saved generated data to data/traffic_data.csv
+2025-08-10 21:52:19,635 - traffic_analysis - INFO - Generating 1000 samples of synthetic traffic data
+2025-08-10 21:52:19,643 - traffic_analysis - INFO - Saved generated data to data/traffic_data.csv
+2025-08-10 21:52:23,939 - traffic_analysis - INFO - Generating 1000 samples of synthetic traffic data
+2025-08-10 21:52:23,948 - traffic_analysis - INFO - Saved generated data to data/traffic_data.csv
+2025-08-10 21:52:34,257 - traffic_analysis - INFO - Generating 1000 samples of synthetic traffic data
+2025-08-10 21:52:34,265 - traffic_analysis - INFO - Saved generated data to data/traffic_data.csv
+2025-08-10 21:52:34,265 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 21:52:34,269 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 21:52:34,272 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 21:52:34,273 - traffic_analysis - INFO - Calculating packet rate
+2025-08-10 21:52:34,550 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 21:52:34,553 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 21:52:34,555 - traffic_analysis - INFO - Saved scaler to models/scaler.pkl
+2025-08-10 21:52:34,555 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 21:52:34,556 - traffic_analysis - INFO - Starting model training process
+2025-08-10 21:52:34,558 - traffic_analysis - INFO - Splitting data into train and test sets
+2025-08-10 21:52:34,559 - traffic_analysis - INFO - Saved feature dataframe to models/X.pkl
+2025-08-10 21:52:34,559 - traffic_analysis - INFO - Performing time series cross-validation
+2025-08-10 21:52:34,560 - traffic_analysis - INFO - Training on fold
+2025-08-10 21:52:39,768 - traffic_analysis - INFO - New best model found with F1 score: 0.4645
+2025-08-10 21:52:39,769 - traffic_analysis - INFO - Training on fold
+2025-08-10 21:52:46,465 - traffic_analysis - INFO - New best model found with F1 score: 0.5301
+2025-08-10 21:52:46,465 - traffic_analysis - INFO - Training on fold
+2025-08-10 21:52:53,030 - traffic_analysis - INFO - Training on fold
+2025-08-10 21:52:58,963 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 21:52:58,966 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 21:52:58,967 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 21:52:58,969 - traffic_analysis - INFO - Skipping packet rate calculation for single record
+2025-08-10 21:52:58,969 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 21:52:58,971 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 21:52:58,972 - traffic_analysis - INFO - Loaded scaler from models/scaler.pkl
+2025-08-10 21:52:58,973 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 21:53:02,243 - traffic_analysis - INFO - Training on fold
+2025-08-10 21:53:12,528 - traffic_analysis - INFO - New best model found with F1 score: 0.5596
+2025-08-10 21:53:12,528 - traffic_analysis - INFO - Evaluating final model on test set
+2025-08-10 21:53:12,535 - traffic_analysis - INFO - Final model metrics:
+2025-08-10 21:53:12,535 - traffic_analysis - INFO - Precision: 0.8911
+2025-08-10 21:53:12,535 - traffic_analysis - INFO - Recall: 0.8738
+2025-08-10 21:53:12,535 - traffic_analysis - INFO - AUC-ROC: 0.8802
+2025-08-10 21:53:12,537 - traffic_analysis - INFO - F1 Score: 0.8824
+2025-08-10 21:53:12,539 - traffic_analysis - INFO - Saved model to models/congestion_model.pkl
+2025-08-10 21:53:34,433 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 21:53:34,437 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 21:53:34,440 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 21:53:34,441 - traffic_analysis - INFO - Calculating packet rate
+2025-08-10 21:53:34,670 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 21:53:34,672 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 21:53:34,674 - traffic_analysis - INFO - Saved scaler to models/scaler.pkl
+2025-08-10 21:53:34,674 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 21:53:34,675 - traffic_analysis - INFO - Starting model training process
+2025-08-10 21:53:34,677 - traffic_analysis - INFO - Splitting data into train and test sets
+2025-08-10 21:53:34,678 - traffic_analysis - INFO - Saved feature dataframe to models/X.pkl
+2025-08-10 21:53:34,678 - traffic_analysis - INFO - Performing time series cross-validation
+2025-08-10 21:53:34,679 - traffic_analysis - INFO - Training on fold
+2025-08-10 21:53:38,308 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 21:53:38,314 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 21:53:38,315 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 21:53:38,317 - traffic_analysis - INFO - Skipping packet rate calculation for single record
+2025-08-10 21:53:38,318 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 21:53:38,320 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 21:53:38,323 - traffic_analysis - INFO - Loaded scaler from models/scaler.pkl
+2025-08-10 21:53:38,324 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 21:53:40,428 - traffic_analysis - INFO - New best model found with F1 score: 0.4645
+2025-08-10 21:53:40,428 - traffic_analysis - INFO - Training on fold
+2025-08-10 21:53:47,036 - traffic_analysis - INFO - New best model found with F1 score: 0.5301
+2025-08-10 21:53:47,036 - traffic_analysis - INFO - Training on fold
+2025-08-10 21:53:54,742 - traffic_analysis - INFO - Training on fold
+2025-08-10 21:54:03,811 - traffic_analysis - INFO - Training on fold
+2025-08-10 21:54:12,886 - traffic_analysis - INFO - New best model found with F1 score: 0.5596
+2025-08-10 21:54:12,887 - traffic_analysis - INFO - Evaluating final model on test set
+2025-08-10 21:54:12,891 - traffic_analysis - INFO - Final model metrics:
+2025-08-10 21:54:12,891 - traffic_analysis - INFO - Precision: 0.8911
+2025-08-10 21:54:12,891 - traffic_analysis - INFO - Recall: 0.8738
+2025-08-10 21:54:12,891 - traffic_analysis - INFO - AUC-ROC: 0.8802
+2025-08-10 21:54:12,892 - traffic_analysis - INFO - F1 Score: 0.8824
+2025-08-10 21:54:12,894 - traffic_analysis - INFO - Saved model to models/congestion_model.pkl
+2025-08-10 21:57:51,663 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 21:57:51,667 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 21:57:51,670 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 21:57:51,672 - traffic_analysis - INFO - Calculating packet rate
+2025-08-10 21:57:51,996 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 21:57:51,998 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 21:57:52,000 - traffic_analysis - INFO - Saved scaler to models/scaler.pkl
+2025-08-10 21:57:52,000 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 21:57:52,001 - traffic_analysis - INFO - Starting model training process
+2025-08-10 21:57:52,003 - traffic_analysis - INFO - Splitting data into train and test sets
+2025-08-10 21:57:52,005 - traffic_analysis - INFO - Saved feature dataframe to models/X.pkl
+2025-08-10 21:57:52,005 - traffic_analysis - INFO - Performing time series cross-validation
+2025-08-10 21:57:52,005 - traffic_analysis - INFO - Training on fold
+2025-08-10 21:57:57,807 - traffic_analysis - INFO - New best model found with F1 score: 0.4645
+2025-08-10 21:57:57,808 - traffic_analysis - INFO - Training on fold
+2025-08-10 21:58:04,622 - traffic_analysis - INFO - New best model found with F1 score: 0.5301
+2025-08-10 21:58:04,623 - traffic_analysis - INFO - Training on fold
+2025-08-10 21:58:12,468 - traffic_analysis - INFO - Training on fold
+2025-08-10 21:58:21,701 - traffic_analysis - INFO - Training on fold
+2025-08-10 21:58:32,144 - traffic_analysis - INFO - New best model found with F1 score: 0.5596
+2025-08-10 21:58:32,144 - traffic_analysis - INFO - Evaluating final model on test set
+2025-08-10 21:58:32,149 - traffic_analysis - INFO - Final model metrics:
+2025-08-10 21:58:32,149 - traffic_analysis - INFO - Precision: 0.8911
+2025-08-10 21:58:32,149 - traffic_analysis - INFO - Recall: 0.8738
+2025-08-10 21:58:32,149 - traffic_analysis - INFO - AUC-ROC: 0.8802
+2025-08-10 21:58:32,151 - traffic_analysis - INFO - F1 Score: 0.8824
+2025-08-10 21:58:32,153 - traffic_analysis - INFO - Saved model to models/congestion_model.pkl
+2025-08-10 21:59:08,762 - traffic_analysis - INFO - Starting prediction process
+2025-08-10 21:59:08,778 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 21:59:08,781 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 21:59:08,782 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 21:59:08,783 - traffic_analysis - INFO - Skipping packet rate calculation for single record
+2025-08-10 21:59:08,784 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 21:59:08,785 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 21:59:08,786 - traffic_analysis - INFO - Loaded scaler from config\..\models/scaler.pkl
+2025-08-10 21:59:08,786 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 21:59:08,790 - traffic_analysis - INFO - Prediction completed: 1 (proba=0.5705034038171132)
+2025-08-10 21:59:10,620 - traffic_analysis - INFO - Starting prediction process
+2025-08-10 21:59:10,624 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 21:59:10,628 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 21:59:10,628 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 21:59:10,629 - traffic_analysis - INFO - Skipping packet rate calculation for single record
+2025-08-10 21:59:10,630 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 21:59:10,631 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 21:59:10,632 - traffic_analysis - INFO - Loaded scaler from config\..\models/scaler.pkl
+2025-08-10 21:59:10,632 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 21:59:10,636 - traffic_analysis - INFO - Prediction completed: 0 (proba=0.4784415696870329)
+2025-08-10 21:59:14,657 - traffic_analysis - INFO - Starting prediction process
+2025-08-10 21:59:14,662 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 21:59:14,665 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 21:59:14,666 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 21:59:14,667 - traffic_analysis - INFO - Skipping packet rate calculation for single record
+2025-08-10 21:59:14,667 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 21:59:14,668 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 21:59:14,669 - traffic_analysis - INFO - Loaded scaler from config\..\models/scaler.pkl
+2025-08-10 21:59:14,669 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 21:59:14,673 - traffic_analysis - INFO - Prediction completed: 1 (proba=0.777506184345916)
+2025-08-10 21:59:20,018 - traffic_analysis - INFO - Starting prediction process
+2025-08-10 21:59:20,023 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 21:59:20,026 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 21:59:20,027 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 21:59:20,028 - traffic_analysis - INFO - Skipping packet rate calculation for single record
+2025-08-10 21:59:20,029 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 21:59:20,030 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 21:59:20,031 - traffic_analysis - INFO - Loaded scaler from config\..\models/scaler.pkl
+2025-08-10 21:59:20,031 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 21:59:20,036 - traffic_analysis - INFO - Prediction completed: 1 (proba=0.5503044960811079)
+2025-08-10 21:59:23,377 - traffic_analysis - INFO - Starting prediction process
+2025-08-10 21:59:23,382 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 21:59:23,385 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 21:59:23,386 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 21:59:23,387 - traffic_analysis - INFO - Skipping packet rate calculation for single record
+2025-08-10 21:59:23,388 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 21:59:23,389 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 21:59:23,390 - traffic_analysis - INFO - Loaded scaler from config\..\models/scaler.pkl
+2025-08-10 21:59:23,390 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 21:59:23,396 - traffic_analysis - INFO - Prediction completed: 1 (proba=0.7196630404425344)
+2025-08-10 21:59:26,315 - traffic_analysis - INFO - Starting prediction process
+2025-08-10 21:59:26,319 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 21:59:26,322 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 21:59:26,323 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 21:59:26,324 - traffic_analysis - INFO - Skipping packet rate calculation for single record
+2025-08-10 21:59:26,324 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 21:59:26,326 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 21:59:26,327 - traffic_analysis - INFO - Loaded scaler from config\..\models/scaler.pkl
+2025-08-10 21:59:26,327 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 21:59:26,332 - traffic_analysis - INFO - Prediction completed: 1 (proba=0.7152773164850015)
+2025-08-10 21:59:55,995 - traffic_analysis - INFO - Starting prediction process
+2025-08-10 21:59:56,001 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 21:59:56,004 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 21:59:56,004 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 21:59:56,006 - traffic_analysis - INFO - Skipping packet rate calculation for single record
+2025-08-10 21:59:56,006 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 21:59:56,007 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 21:59:56,008 - traffic_analysis - INFO - Loaded scaler from config\..\models/scaler.pkl
+2025-08-10 21:59:56,008 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 21:59:56,013 - traffic_analysis - INFO - Prediction completed: 1 (proba=0.5705034038171132)
+2025-08-10 22:00:02,323 - traffic_analysis - INFO - Starting prediction process
+2025-08-10 22:00:02,328 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 22:00:02,332 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 22:00:02,332 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 22:00:02,334 - traffic_analysis - INFO - Skipping packet rate calculation for single record
+2025-08-10 22:00:02,334 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 22:00:02,336 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 22:00:02,337 - traffic_analysis - INFO - Loaded scaler from config\..\models/scaler.pkl
+2025-08-10 22:00:02,337 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 22:00:02,341 - traffic_analysis - INFO - Prediction completed: 1 (proba=0.5705034038171132)
+2025-08-10 22:00:13,875 - traffic_analysis - INFO - Starting prediction process
+2025-08-10 22:00:13,881 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 22:00:13,885 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 22:00:13,885 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 22:00:13,886 - traffic_analysis - INFO - Skipping packet rate calculation for single record
+2025-08-10 22:00:13,887 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 22:00:13,888 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 22:00:13,889 - traffic_analysis - INFO - Loaded scaler from config\..\models/scaler.pkl
+2025-08-10 22:00:13,889 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 22:00:13,893 - traffic_analysis - INFO - Prediction completed: 1 (proba=0.590192264000393)
+2025-08-10 22:00:59,585 - traffic_analysis - INFO - Starting prediction process
+2025-08-10 22:00:59,666 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 22:00:59,670 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 22:00:59,670 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 22:00:59,672 - traffic_analysis - INFO - Skipping packet rate calculation for single record
+2025-08-10 22:00:59,672 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 22:00:59,673 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 22:00:59,675 - traffic_analysis - INFO - Loaded scaler from config\..\models/scaler.pkl
+2025-08-10 22:00:59,675 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 22:00:59,678 - traffic_analysis - INFO - Prediction completed: 1 (proba=0.590192264000393)
+2025-08-10 22:01:04,078 - traffic_analysis - INFO - Starting prediction process
+2025-08-10 22:01:04,083 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 22:01:04,088 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 22:01:04,089 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 22:01:04,090 - traffic_analysis - INFO - Skipping packet rate calculation for single record
+2025-08-10 22:01:04,091 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 22:01:04,092 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 22:01:04,093 - traffic_analysis - INFO - Loaded scaler from config\..\models/scaler.pkl
+2025-08-10 22:01:04,093 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 22:01:04,100 - traffic_analysis - INFO - Prediction completed: 0 (proba=0.3291206654558792)
+2025-08-10 22:01:08,954 - traffic_analysis - INFO - Starting prediction process
+2025-08-10 22:01:08,959 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 22:01:08,963 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 22:01:08,964 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 22:01:08,965 - traffic_analysis - INFO - Skipping packet rate calculation for single record
+2025-08-10 22:01:08,966 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 22:01:08,967 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 22:01:08,968 - traffic_analysis - INFO - Loaded scaler from config\..\models/scaler.pkl
+2025-08-10 22:01:08,968 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 22:01:08,972 - traffic_analysis - INFO - Prediction completed: 0 (proba=0.3291206654558792)
+2025-08-10 22:01:17,023 - traffic_analysis - INFO - Starting prediction process
+2025-08-10 22:01:17,028 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 22:01:17,032 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 22:01:17,033 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 22:01:17,034 - traffic_analysis - INFO - Skipping packet rate calculation for single record
+2025-08-10 22:01:17,034 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 22:01:17,036 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 22:01:17,038 - traffic_analysis - INFO - Loaded scaler from config\..\models/scaler.pkl
+2025-08-10 22:01:17,038 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 22:01:17,042 - traffic_analysis - INFO - Prediction completed: 0 (proba=0.4784415696870329)
+2025-08-10 22:01:18,101 - traffic_analysis - INFO - Starting prediction process
+2025-08-10 22:01:18,105 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 22:01:18,109 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 22:01:18,109 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 22:01:18,110 - traffic_analysis - INFO - Skipping packet rate calculation for single record
+2025-08-10 22:01:18,111 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 22:01:18,112 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 22:01:18,114 - traffic_analysis - INFO - Loaded scaler from config\..\models/scaler.pkl
+2025-08-10 22:01:18,114 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 22:01:18,118 - traffic_analysis - INFO - Prediction completed: 1 (proba=0.7882860038867424)
+2025-08-10 22:01:22,644 - traffic_analysis - INFO - Starting prediction process
+2025-08-10 22:01:22,649 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 22:01:22,653 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 22:01:22,654 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 22:01:22,655 - traffic_analysis - INFO - Skipping packet rate calculation for single record
+2025-08-10 22:01:22,655 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 22:01:22,656 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 22:01:22,658 - traffic_analysis - INFO - Loaded scaler from config\..\models/scaler.pkl
+2025-08-10 22:01:22,658 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 22:01:22,663 - traffic_analysis - INFO - Prediction completed: 1 (proba=0.7287609058971125)
+2025-08-10 22:01:25,684 - traffic_analysis - INFO - Starting prediction process
+2025-08-10 22:01:25,689 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 22:01:25,692 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 22:01:25,692 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 22:01:25,693 - traffic_analysis - INFO - Skipping packet rate calculation for single record
+2025-08-10 22:01:25,694 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 22:01:25,696 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 22:01:25,697 - traffic_analysis - INFO - Loaded scaler from config\..\models/scaler.pkl
+2025-08-10 22:01:25,697 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 22:01:25,702 - traffic_analysis - INFO - Prediction completed: 1 (proba=0.641822272307853)
+2025-08-10 22:01:28,364 - traffic_analysis - INFO - Starting prediction process
+2025-08-10 22:01:28,369 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 22:01:28,372 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 22:01:28,372 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 22:01:28,374 - traffic_analysis - INFO - Skipping packet rate calculation for single record
+2025-08-10 22:01:28,374 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 22:01:28,375 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 22:01:28,376 - traffic_analysis - INFO - Loaded scaler from config\..\models/scaler.pkl
+2025-08-10 22:01:28,376 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 22:01:28,380 - traffic_analysis - INFO - Prediction completed: 1 (proba=0.656745995098576)
+2025-08-10 22:01:31,821 - traffic_analysis - INFO - Starting prediction process
+2025-08-10 22:01:31,825 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 22:01:31,828 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 22:01:31,829 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 22:01:31,830 - traffic_analysis - INFO - Skipping packet rate calculation for single record
+2025-08-10 22:01:31,831 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 22:01:31,832 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 22:01:31,834 - traffic_analysis - INFO - Loaded scaler from config\..\models/scaler.pkl
+2025-08-10 22:01:31,834 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 22:01:31,839 - traffic_analysis - INFO - Prediction completed: 1 (proba=0.641822272307853)
+2025-08-10 22:01:35,160 - traffic_analysis - INFO - Starting prediction process
+2025-08-10 22:01:35,165 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 22:01:35,169 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 22:01:35,169 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 22:01:35,170 - traffic_analysis - INFO - Skipping packet rate calculation for single record
+2025-08-10 22:01:35,171 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 22:01:35,173 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 22:01:35,174 - traffic_analysis - INFO - Loaded scaler from config\..\models/scaler.pkl
+2025-08-10 22:01:35,174 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 22:01:35,179 - traffic_analysis - INFO - Prediction completed: 1 (proba=0.6491748184069928)
+2025-08-10 22:01:38,173 - traffic_analysis - INFO - Starting prediction process
+2025-08-10 22:01:38,178 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 22:01:38,181 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 22:01:38,182 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 22:01:38,183 - traffic_analysis - INFO - Skipping packet rate calculation for single record
+2025-08-10 22:01:38,183 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 22:01:38,185 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 22:01:38,186 - traffic_analysis - INFO - Loaded scaler from config\..\models/scaler.pkl
+2025-08-10 22:01:38,186 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 22:01:38,190 - traffic_analysis - INFO - Prediction completed: 0 (proba=0.3291206654558792)
+2025-08-10 22:01:47,218 - traffic_analysis - INFO - Starting prediction process
+2025-08-10 22:01:47,223 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 22:01:47,226 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 22:01:47,227 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 22:01:47,228 - traffic_analysis - INFO - Skipping packet rate calculation for single record
+2025-08-10 22:01:47,228 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 22:01:47,230 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 22:01:47,231 - traffic_analysis - INFO - Loaded scaler from config\..\models/scaler.pkl
+2025-08-10 22:01:47,231 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 22:01:47,235 - traffic_analysis - INFO - Prediction completed: 0 (proba=0.4881211768929201)
+2025-08-10 22:01:56,909 - traffic_analysis - INFO - Starting prediction process
+2025-08-10 22:01:56,914 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 22:01:56,917 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 22:01:56,917 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 22:01:56,919 - traffic_analysis - INFO - Skipping packet rate calculation for single record
+2025-08-10 22:01:56,919 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 22:01:56,921 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 22:01:56,922 - traffic_analysis - INFO - Loaded scaler from config\..\models/scaler.pkl
+2025-08-10 22:01:56,922 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 22:01:56,928 - traffic_analysis - INFO - Prediction completed: 0 (proba=0.4881211768929201)
+2025-08-10 22:02:01,816 - traffic_analysis - INFO - Starting prediction process
+2025-08-10 22:02:01,820 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 22:02:01,824 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 22:02:01,824 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 22:02:01,825 - traffic_analysis - INFO - Skipping packet rate calculation for single record
+2025-08-10 22:02:01,826 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 22:02:01,827 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 22:02:01,829 - traffic_analysis - INFO - Loaded scaler from config\..\models/scaler.pkl
+2025-08-10 22:02:01,829 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 22:02:01,833 - traffic_analysis - INFO - Prediction completed: 1 (proba=0.6491748184069928)
+2025-08-10 22:02:05,109 - traffic_analysis - INFO - Starting prediction process
+2025-08-10 22:02:05,113 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 22:02:05,117 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 22:02:05,117 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 22:02:05,118 - traffic_analysis - INFO - Skipping packet rate calculation for single record
+2025-08-10 22:02:05,119 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 22:02:05,121 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 22:02:05,122 - traffic_analysis - INFO - Loaded scaler from config\..\models/scaler.pkl
+2025-08-10 22:02:05,122 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 22:02:05,127 - traffic_analysis - INFO - Prediction completed: 0 (proba=0.3291206654558792)
+2025-08-10 22:02:09,734 - traffic_analysis - INFO - Starting prediction process
+2025-08-10 22:02:09,739 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 22:02:09,742 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 22:02:09,743 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 22:02:09,744 - traffic_analysis - INFO - Skipping packet rate calculation for single record
+2025-08-10 22:02:09,744 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 22:02:09,745 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 22:02:09,746 - traffic_analysis - INFO - Loaded scaler from config\..\models/scaler.pkl
+2025-08-10 22:02:09,746 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 22:02:09,750 - traffic_analysis - INFO - Prediction completed: 0 (proba=0.3291206654558792)
+2025-08-10 22:02:16,264 - traffic_analysis - INFO - Starting prediction process
+2025-08-10 22:02:16,269 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 22:02:16,272 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 22:02:16,272 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 22:02:16,273 - traffic_analysis - INFO - Skipping packet rate calculation for single record
+2025-08-10 22:02:16,274 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 22:02:16,275 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 22:02:16,277 - traffic_analysis - INFO - Loaded scaler from config\..\models/scaler.pkl
+2025-08-10 22:02:16,277 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 22:02:16,282 - traffic_analysis - INFO - Prediction completed: 0 (proba=0.3393850413081769)
+2025-08-10 22:02:20,812 - traffic_analysis - INFO - Starting prediction process
+2025-08-10 22:02:20,816 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 22:02:20,820 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 22:02:20,820 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 22:02:20,822 - traffic_analysis - INFO - Skipping packet rate calculation for single record
+2025-08-10 22:02:20,822 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 22:02:20,824 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 22:02:20,825 - traffic_analysis - INFO - Loaded scaler from config\..\models/scaler.pkl
+2025-08-10 22:02:20,825 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 22:02:20,830 - traffic_analysis - INFO - Prediction completed: 0 (proba=0.3393850413081769)
+2025-08-10 22:04:37,174 - traffic_analysis - INFO - Starting prediction process
+2025-08-10 22:04:37,180 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 22:04:37,183 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 22:04:37,183 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 22:04:37,184 - traffic_analysis - INFO - Skipping packet rate calculation for single record
+2025-08-10 22:04:37,185 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 22:04:37,186 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 22:04:37,187 - traffic_analysis - INFO - Loaded scaler from config\..\models/scaler.pkl
+2025-08-10 22:04:37,188 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 22:04:37,192 - traffic_analysis - INFO - Prediction completed: 0 (proba=0.4629964431207855)
+2025-08-10 22:04:37,195 - traffic_analysis - INFO - Generating 10 samples of synthetic traffic data
+2025-08-10 22:04:37,198 - traffic_analysis - INFO - Saved generated data to data/test_generated.csv
+2025-08-10 22:04:37,873 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 22:04:37,876 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 22:04:37,876 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 22:04:37,877 - traffic_analysis - INFO - Skipping packet rate calculation for single record
+2025-08-10 22:04:37,877 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 22:04:37,878 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 22:04:37,880 - traffic_analysis - INFO - Loaded scaler from models/scaler.pkl
+2025-08-10 22:04:37,880 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 22:04:37,889 - traffic_analysis - INFO - Generating 30 samples of synthetic traffic data
+2025-08-10 22:04:37,891 - traffic_analysis - INFO - Saved generated data to C:\Users\User\AppData\Local\Temp\pytest-of-User\pytest-0\test_feature_engineering_shape0\temp.csv
+2025-08-10 22:04:37,891 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 22:04:37,893 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 22:04:37,894 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 22:04:37,894 - traffic_analysis - INFO - Calculating packet rate
+2025-08-10 22:04:37,902 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 22:04:37,903 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 22:04:37,905 - traffic_analysis - INFO - Saved scaler to models/test_scaler.pkl
+2025-08-10 22:04:37,905 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 22:04:37,906 - traffic_analysis - INFO - Starting prediction process
+2025-08-10 22:04:37,911 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 22:04:37,913 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 22:04:37,913 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 22:04:37,914 - traffic_analysis - INFO - Skipping packet rate calculation for single record
+2025-08-10 22:04:37,914 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 22:04:37,915 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 22:04:37,916 - traffic_analysis - INFO - Loaded scaler from config\..\models/scaler.pkl
+2025-08-10 22:04:37,916 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 22:04:37,920 - traffic_analysis - INFO - Prediction completed: 0 (proba=0.49439029951669555)
+2025-08-10 22:05:24,666 - traffic_analysis - INFO - Starting prediction process
+2025-08-10 22:05:24,671 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 22:05:24,674 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 22:05:24,675 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 22:05:24,676 - traffic_analysis - INFO - Skipping packet rate calculation for single record
+2025-08-10 22:05:24,676 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 22:05:24,677 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 22:05:24,678 - traffic_analysis - INFO - Loaded scaler from config\..\models/scaler.pkl
+2025-08-10 22:05:24,679 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 22:05:24,683 - traffic_analysis - INFO - Prediction completed: 0 (proba=0.4629964431207855)
+2025-08-10 22:05:24,686 - traffic_analysis - INFO - Generating 10 samples of synthetic traffic data
+2025-08-10 22:05:24,689 - traffic_analysis - INFO - Saved generated data to data/test_generated.csv
+2025-08-10 22:05:25,079 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 22:05:25,082 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 22:05:25,082 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 22:05:25,083 - traffic_analysis - INFO - Skipping packet rate calculation for single record
+2025-08-10 22:05:25,084 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 22:05:25,085 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 22:05:25,086 - traffic_analysis - INFO - Loaded scaler from models/scaler.pkl
+2025-08-10 22:05:25,086 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 22:05:25,096 - traffic_analysis - INFO - Generating 30 samples of synthetic traffic data
+2025-08-10 22:05:25,097 - traffic_analysis - INFO - Saved generated data to C:\Users\User\AppData\Local\Temp\pytest-of-User\pytest-1\test_feature_engineering_shape0\temp.csv
+2025-08-10 22:05:25,097 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 22:05:25,100 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 22:05:25,100 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 22:05:25,101 - traffic_analysis - INFO - Calculating packet rate
+2025-08-10 22:05:25,109 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 22:05:25,110 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 22:05:25,112 - traffic_analysis - INFO - Saved scaler to models/test_scaler.pkl
+2025-08-10 22:05:25,112 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 22:05:25,113 - traffic_analysis - INFO - Starting prediction process
+2025-08-10 22:05:25,117 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 22:05:25,119 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 22:05:25,120 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 22:05:25,120 - traffic_analysis - INFO - Skipping packet rate calculation for single record
+2025-08-10 22:05:25,121 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 22:05:25,122 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 22:05:25,123 - traffic_analysis - INFO - Loaded scaler from config\..\models/scaler.pkl
+2025-08-10 22:05:25,123 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 22:05:25,127 - traffic_analysis - INFO - Prediction completed: 0 (proba=0.49439029951669555)
+2025-08-10 22:06:40,704 - traffic_analysis - INFO - Starting prediction process
+2025-08-10 22:06:40,788 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 22:06:40,790 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 22:06:40,791 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 22:06:40,792 - traffic_analysis - INFO - Skipping packet rate calculation for single record
+2025-08-10 22:06:40,793 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 22:06:40,794 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 22:06:40,795 - traffic_analysis - INFO - Loaded scaler from config\..\models/scaler.pkl
+2025-08-10 22:06:40,795 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 22:06:40,800 - traffic_analysis - INFO - Prediction completed: 0 (proba=0.3291206654558792)
+2025-08-10 22:06:46,215 - traffic_analysis - INFO - Starting prediction process
+2025-08-10 22:06:46,221 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 22:06:46,225 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 22:06:46,225 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 22:06:46,227 - traffic_analysis - INFO - Skipping packet rate calculation for single record
+2025-08-10 22:06:46,227 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 22:06:46,229 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 22:06:46,231 - traffic_analysis - INFO - Loaded scaler from config\..\models/scaler.pkl
+2025-08-10 22:06:46,231 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 22:06:46,238 - traffic_analysis - INFO - Prediction completed: 1 (proba=0.6491748184069928)
+2025-08-10 22:06:47,504 - traffic_analysis - INFO - Starting prediction process
+2025-08-10 22:06:47,509 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 22:06:47,513 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 22:06:47,514 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 22:06:47,515 - traffic_analysis - INFO - Skipping packet rate calculation for single record
+2025-08-10 22:06:47,515 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 22:06:47,517 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 22:06:47,518 - traffic_analysis - INFO - Loaded scaler from config\..\models/scaler.pkl
+2025-08-10 22:06:47,518 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 22:06:47,523 - traffic_analysis - INFO - Prediction completed: 0 (proba=0.4784415696870329)
+2025-08-10 22:06:55,678 - traffic_analysis - INFO - Starting prediction process
+2025-08-10 22:06:55,683 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 22:06:55,686 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 22:06:55,687 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 22:06:55,688 - traffic_analysis - INFO - Skipping packet rate calculation for single record
+2025-08-10 22:06:55,689 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 22:06:55,690 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 22:06:55,691 - traffic_analysis - INFO - Loaded scaler from config\..\models/scaler.pkl
+2025-08-10 22:06:55,691 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 22:06:55,697 - traffic_analysis - INFO - Prediction completed: 1 (proba=0.641822272307853)
+2025-08-10 22:06:57,376 - traffic_analysis - INFO - Starting prediction process
+2025-08-10 22:06:57,382 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 22:06:57,385 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 22:06:57,386 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 22:06:57,387 - traffic_analysis - INFO - Skipping packet rate calculation for single record
+2025-08-10 22:06:57,387 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 22:06:57,389 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 22:06:57,390 - traffic_analysis - INFO - Loaded scaler from config\..\models/scaler.pkl
+2025-08-10 22:06:57,390 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 22:06:57,397 - traffic_analysis - INFO - Prediction completed: 0 (proba=0.4784415696870329)
+2025-08-10 22:07:35,920 - traffic_analysis - INFO - Starting prediction process
+2025-08-10 22:07:35,925 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 22:07:35,928 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 22:07:35,929 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 22:07:35,930 - traffic_analysis - INFO - Skipping packet rate calculation for single record
+2025-08-10 22:07:35,930 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 22:07:35,931 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 22:07:35,932 - traffic_analysis - INFO - Loaded scaler from config\..\models/scaler.pkl
+2025-08-10 22:07:35,933 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 22:07:35,937 - traffic_analysis - INFO - Prediction completed: 0 (proba=0.3291206654558792)
+2025-08-10 22:07:35,938 - traffic_analysis - INFO - Starting prediction process
+2025-08-10 22:07:35,941 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 22:07:35,944 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 22:07:35,944 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 22:07:35,945 - traffic_analysis - INFO - Skipping packet rate calculation for single record
+2025-08-10 22:07:35,945 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 22:07:35,946 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 22:07:35,947 - traffic_analysis - INFO - Loaded scaler from config\..\models/scaler.pkl
+2025-08-10 22:07:35,947 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 22:07:35,951 - traffic_analysis - INFO - Prediction completed: 1 (proba=0.6491748184069928)
+2025-08-10 22:07:35,951 - traffic_analysis - INFO - Starting prediction process
+2025-08-10 22:07:35,955 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 22:07:35,957 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 22:07:35,957 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 22:07:35,958 - traffic_analysis - INFO - Skipping packet rate calculation for single record
+2025-08-10 22:07:35,958 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 22:07:35,959 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 22:07:35,960 - traffic_analysis - INFO - Loaded scaler from config\..\models/scaler.pkl
+2025-08-10 22:07:35,960 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 22:07:35,964 - traffic_analysis - INFO - Prediction completed: 1 (proba=0.641822272307853)
+2025-08-10 22:07:35,965 - traffic_analysis - INFO - Starting prediction process
+2025-08-10 22:07:35,968 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 22:07:35,971 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 22:07:35,971 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 22:07:35,972 - traffic_analysis - INFO - Skipping packet rate calculation for single record
+2025-08-10 22:07:35,972 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 22:07:35,973 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 22:07:35,974 - traffic_analysis - INFO - Loaded scaler from config\..\models/scaler.pkl
+2025-08-10 22:07:35,974 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 22:07:35,978 - traffic_analysis - INFO - Prediction completed: 1 (proba=0.656745995098576)
+2025-08-10 22:08:36,119 - traffic_analysis - INFO - Starting prediction process
+2025-08-10 22:08:36,125 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 22:08:36,127 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 22:08:36,128 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 22:08:36,129 - traffic_analysis - INFO - Skipping packet rate calculation for single record
+2025-08-10 22:08:36,129 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 22:08:36,130 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 22:08:36,131 - traffic_analysis - INFO - Loaded scaler from config\..\models/scaler.pkl
+2025-08-10 22:08:36,132 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 22:08:36,136 - traffic_analysis - INFO - Prediction completed: 0 (proba=0.4629964431207855)
+2025-08-10 22:08:36,138 - traffic_analysis - INFO - Generating 10 samples of synthetic traffic data
+2025-08-10 22:08:36,141 - traffic_analysis - INFO - Saved generated data to data/test_generated.csv
+2025-08-10 22:08:36,521 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 22:08:36,524 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 22:08:36,524 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 22:08:36,525 - traffic_analysis - INFO - Skipping packet rate calculation for single record
+2025-08-10 22:08:36,526 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 22:08:36,527 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 22:08:36,528 - traffic_analysis - INFO - Loaded scaler from models/scaler.pkl
+2025-08-10 22:08:36,528 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 22:08:36,537 - traffic_analysis - INFO - Generating 30 samples of synthetic traffic data
+2025-08-10 22:08:36,539 - traffic_analysis - INFO - Saved generated data to C:\Users\User\AppData\Local\Temp\pytest-of-User\pytest-2\test_feature_engineering_shape0\temp.csv
+2025-08-10 22:08:36,539 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 22:08:36,541 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 22:08:36,542 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 22:08:36,543 - traffic_analysis - INFO - Calculating packet rate
+2025-08-10 22:08:36,550 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 22:08:36,551 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 22:08:36,553 - traffic_analysis - INFO - Saved scaler to models/test_scaler.pkl
+2025-08-10 22:08:36,553 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 22:08:36,554 - traffic_analysis - INFO - Starting prediction process
+2025-08-10 22:08:36,558 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 22:08:36,560 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 22:08:36,561 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 22:08:36,561 - traffic_analysis - INFO - Skipping packet rate calculation for single record
+2025-08-10 22:08:36,561 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 22:08:36,562 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 22:08:36,563 - traffic_analysis - INFO - Loaded scaler from config\..\models/scaler.pkl
+2025-08-10 22:08:36,563 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 22:08:36,567 - traffic_analysis - INFO - Prediction completed: 0 (proba=0.49439029951669555)
+2025-08-10 22:08:36,569 - traffic_analysis - INFO - Starting prediction process
+2025-08-10 22:08:36,572 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 22:08:36,574 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 22:08:36,575 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 22:08:36,575 - traffic_analysis - INFO - Skipping packet rate calculation for single record
+2025-08-10 22:08:36,576 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 22:08:36,577 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 22:08:36,577 - traffic_analysis - INFO - Loaded scaler from config\..\models/scaler.pkl
+2025-08-10 22:08:36,577 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 22:08:36,582 - traffic_analysis - INFO - Prediction completed: 0 (proba=0.3291206654558792)
+2025-08-10 22:08:36,582 - traffic_analysis - INFO - Starting prediction process
+2025-08-10 22:08:36,586 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 22:08:36,588 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 22:08:36,588 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 22:08:36,589 - traffic_analysis - INFO - Skipping packet rate calculation for single record
+2025-08-10 22:08:36,589 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 22:08:36,590 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 22:08:36,591 - traffic_analysis - INFO - Loaded scaler from config\..\models/scaler.pkl
+2025-08-10 22:08:36,591 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 22:08:36,595 - traffic_analysis - INFO - Prediction completed: 1 (proba=0.6491748184069928)
+2025-08-10 22:08:36,596 - traffic_analysis - INFO - Starting prediction process
+2025-08-10 22:08:36,599 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 22:08:36,602 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 22:08:36,602 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 22:08:36,603 - traffic_analysis - INFO - Skipping packet rate calculation for single record
+2025-08-10 22:08:36,603 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 22:08:36,604 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 22:08:36,605 - traffic_analysis - INFO - Loaded scaler from config\..\models/scaler.pkl
+2025-08-10 22:08:36,605 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 22:08:36,609 - traffic_analysis - INFO - Prediction completed: 1 (proba=0.641822272307853)
+2025-08-10 22:08:36,610 - traffic_analysis - INFO - Starting prediction process
+2025-08-10 22:08:36,613 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-10 22:08:36,615 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-10 22:08:36,616 - traffic_analysis - INFO - Creating aggregate features
+2025-08-10 22:08:36,616 - traffic_analysis - INFO - Skipping packet rate calculation for single record
+2025-08-10 22:08:36,617 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-10 22:08:36,617 - traffic_analysis - INFO - Scaling numerical features
+2025-08-10 22:08:36,618 - traffic_analysis - INFO - Loaded scaler from config\..\models/scaler.pkl
+2025-08-10 22:08:36,618 - traffic_analysis - INFO - Feature engineering completed
+2025-08-10 22:08:36,622 - traffic_analysis - INFO - Prediction completed: 1 (proba=0.656745995098576)

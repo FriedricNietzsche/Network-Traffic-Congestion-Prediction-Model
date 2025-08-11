@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block title %}Home - Traffic Congestion{% endblock %}
+{% block content %}
+<section class="hero">
+    <h1>Traffic Congestion Prediction</h1>
+    <p class="lead">Generate data, train models, visualize performance, and predict congestion in real time.</p>
+    <div class="actions">
+        <a class="btn" href="/predictdata">Make a Prediction</a>
+        <a class="btn secondary" href="/dashboard">View Dashboard</a>
+    </div>
+</section>
+<section class="info-grid">
+    <div class="card"><h3>Pipeline</h3><p>Generate synthetic network traffic and engineer meaningful temporal and protocol features.</p></div>
+    <div class="card"><h3>Models</h3><p>Random Forest with optional advanced models and imbalance handling (SMOTE).</p></div>
+    <div class="card"><h3>Monitoring</h3><p>Dashboard shows metrics, plots, and downloadable artifacts.</p></div>
+    <div class="card"><h3>API</h3><p>Use the JSON endpoint <code>/api/predict</code> for programmatic inference.</p></div>
+</section>
+{% endblock %}

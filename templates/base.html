@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>{% block title %}Traffic Congestion{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  {% block head_extra %}{% endblock %}
+</head>
+<body class="{% if request.cookies.get('theme','light') == 'dark' %}dark-mode{% endif %}">
+  <header class="site-header">
+    <div class="container flex-between">
+      <h2 class="logo"><a href="/">Net Traffic Monitor</a></h2>
+      <nav class="main-nav">
+        <a href="/">Home</a>
+        <a href="/predictdata">Predict</a>
+        <a href="/dashboard">Dashboard</a>
+      </nav>
+    </div>
+  </header>
+  <main class="container" style="padding-top:20px;">
+    {% block content %}{% endblock %}
+  </main>
+  <footer class="site-footer">
+    <div class="container small">
+      <span>&copy; {{ 2025 }} Traffic Congestion Prediction Demo</span>
+    </div>
+  </footer>
+  {% block scripts %}{% endblock %}
+  <script>
+    // Client-side theme persistence (in addition to cookie)
+    (function(){
+      const stored = localStorage.getItem('theme');
+      if(stored && stored !== (document.body.classList.contains('dark-mode') ? 'dark' : 'light')){
+        if(stored==='dark') document.body.classList.add('dark-mode');
+        else document.body.classList.remove('dark-mode');
+      }
+      document.querySelectorAll('a[href="/toggle-theme"]').forEach(a=>{
+        a.addEventListener('click', function(e){
+          e.preventDefault();
+          document.body.classList.toggle('dark-mode');
+          const mode = document.body.classList.contains('dark-mode') ? 'dark':'light';
+          localStorage.setItem('theme', mode);
+          // Also hit server to set cookie (non-blocking)
+          fetch('/toggle-theme').catch(()=>{});
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

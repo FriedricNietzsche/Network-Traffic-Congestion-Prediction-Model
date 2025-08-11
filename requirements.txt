@@ -1,0 +1,25 @@
+﻿# Core dependencies
+numpy
+pandas
+scikit-learn
+matplotlib
+seaborn
+ipaddress
+
+# Advanced modeling (optional, gracefully degraded if unavailable)
+xgboost
+imbalanced-learn
+shap
+
+# Web framework & API
+flask
+flask-cors
+
+# Utilities
+pyyaml
+python-dotenv
+
+# Development tools
+pytest
+black
+flake8

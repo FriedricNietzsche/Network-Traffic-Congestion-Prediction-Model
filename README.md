@@ -221,7 +221,7 @@ visualization/
 Idk and idc
 
 ## Acknowledgements
-Python ecosystem: scikit-learn, Flask, SHAP, XGBoost, Chart.js, and associated open source libraries.
+Python ecosystem: scikit-learn, Flask, SHAP, XGBoost, Chart.js, and associated open source libraries. (These dependencies will be reduced to ashes in my next project)
 
 ---
 Contributions and issue reports are welcome.

@@ -1,6 +1,6 @@
 # Network Traffic Congestion Prediction & Monitoring Dashboard
 
-End‑to‑end machine learning and monitoring system for predicting network traffic congestion. The application covers synthetic data generation, feature engineering, imbalance handling, model training and tuning, explainability (local + global SHAP), version management (save, list, rollback, retention), asynchronous training with server‑sent events (SSE) progress streaming, probability threshold control, and an interactive Flask dashboard. A lightweight automated test suite is included.
+(AI generated) End‑to‑end machine learning and monitoring system for predicting network traffic congestion. The application covers synthetic data generation, feature engineering, imbalance handling, model training and tuning, explainability (local + global SHAP), version management (save, list, rollback, retention), asynchronous training with server‑sent events (SSE) progress streaming, probability threshold control, and an interactive Flask dashboard. A lightweight automated test suite is included.
 
 ## Key Features
 * Synthetic data generator (deterministic seed in code for reproducibility).

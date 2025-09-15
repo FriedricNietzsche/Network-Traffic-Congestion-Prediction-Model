@@ -1670,3 +1670,45 @@ Feature names unseen at fit time:
 2025-08-10 22:08:36,618 - traffic_analysis - INFO - Loaded scaler from config\..\models/scaler.pkl
 2025-08-10 22:08:36,618 - traffic_analysis - INFO - Feature engineering completed
 2025-08-10 22:08:36,622 - traffic_analysis - INFO - Prediction completed: 1 (proba=0.656745995098576)
+2025-08-11 14:38:29,475 - traffic_analysis - INFO - Generating 1000 samples of synthetic traffic data
+2025-08-11 14:38:29,485 - traffic_analysis - INFO - Saved generated data to data/traffic_data.csv
+2025-08-11 14:38:29,485 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-11 14:38:29,489 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-11 14:38:29,492 - traffic_analysis - INFO - Creating aggregate features
+2025-08-11 14:38:29,494 - traffic_analysis - INFO - Calculating packet rate
+2025-08-11 14:38:29,807 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-11 14:38:29,810 - traffic_analysis - INFO - Scaling numerical features
+2025-08-11 14:38:29,812 - traffic_analysis - INFO - Saved scaler to models/scaler.pkl
+2025-08-11 14:38:29,812 - traffic_analysis - INFO - Feature engineering completed
+2025-08-11 14:38:29,813 - traffic_analysis - INFO - Starting model training process
+2025-08-11 14:38:29,816 - traffic_analysis - INFO - Splitting data into train and test sets
+2025-08-11 14:38:29,819 - traffic_analysis - INFO - Saved feature dataframe to models/X.pkl
+2025-08-11 14:38:29,819 - traffic_analysis - INFO - Performing time series cross-validation
+2025-08-11 14:38:29,820 - traffic_analysis - INFO - Training on fold
+2025-08-11 14:38:31,224 - traffic_analysis - INFO - Applied imbalance method smote; new class distribution: {np.int32(0): np.int64(91), np.int32(1): np.int64(91)}
+2025-08-11 14:38:37,831 - traffic_analysis - INFO - New best model found with F1 score: 0.4557
+2025-08-11 14:38:37,831 - traffic_analysis - INFO - Training on fold
+2025-08-11 14:38:37,838 - traffic_analysis - INFO - Applied imbalance method smote; new class distribution: {np.int32(0): np.int64(169), np.int32(1): np.int64(169)}
+2025-08-11 14:38:44,830 - traffic_analysis - INFO - New best model found with F1 score: 0.5212
+2025-08-11 14:38:44,830 - traffic_analysis - INFO - Training on fold
+2025-08-11 14:38:44,839 - traffic_analysis - INFO - Applied imbalance method smote; new class distribution: {np.int32(0): np.int64(252), np.int32(1): np.int64(252)}
+2025-08-11 14:38:53,185 - traffic_analysis - INFO - Training on fold
+2025-08-11 14:38:53,197 - traffic_analysis - INFO - Applied imbalance method smote; new class distribution: {np.int32(0): np.int64(335), np.int32(1): np.int64(335)}
+2025-08-11 14:39:02,890 - traffic_analysis - INFO - Training on fold
+2025-08-11 14:39:02,903 - traffic_analysis - INFO - Applied imbalance method smote; new class distribution: {np.int32(0): np.int64(419), np.int32(1): np.int64(419)}
+2025-08-11 14:39:13,775 - traffic_analysis - INFO - New best model found with F1 score: 0.5474
+2025-08-11 14:39:13,775 - traffic_analysis - INFO - Evaluating final model on test set
+2025-08-11 14:39:13,784 - traffic_analysis - INFO - Final model metrics:
+2025-08-11 14:39:13,784 - traffic_analysis - INFO - Precision: 0.9394
+2025-08-11 14:39:13,785 - traffic_analysis - INFO - Recall: 0.9029
+2025-08-11 14:39:13,785 - traffic_analysis - INFO - AUC-ROC: 0.9205
+2025-08-11 14:39:13,786 - traffic_analysis - INFO - F1 Score: 0.9208
+2025-08-11 14:39:13,793 - traffic_analysis - INFO - Saved model to models/congestion_model.pkl
+2025-08-11 14:39:19,479 - traffic_analysis - INFO - Starting feature engineering process
+2025-08-11 14:39:19,483 - traffic_analysis - INFO - Converting IP addresses to integers
+2025-08-11 14:39:19,484 - traffic_analysis - INFO - Creating aggregate features
+2025-08-11 14:39:19,486 - traffic_analysis - INFO - Skipping packet rate calculation for single record
+2025-08-11 14:39:19,487 - traffic_analysis - INFO - One-hot encoding categorical features
+2025-08-11 14:39:19,488 - traffic_analysis - INFO - Scaling numerical features
+2025-08-11 14:39:19,491 - traffic_analysis - INFO - Loaded scaler from models/scaler.pkl
+2025-08-11 14:39:19,491 - traffic_analysis - INFO - Feature engineering completed

@@ -1,0 +1,32 @@
+{
+  "precision": 0.9394,
+  "recall": 0.9029,
+  "f1_score": 0.9208,
+  "auc_roc": 0.9205,
+  "samples": 1000,
+  "features": 16,
+  "trained_at": "2025-08-11T18:39:13.797731+00:00",
+  "tp": 93,
+  "tn": 91,
+  "fp": 6,
+  "fn": 10,
+  "phase_durations": {
+    "data": 0.01,
+    "feature_engineering": 0.327,
+    "training": 43.981,
+    "scoring": 0.005,
+    "shap": 2.558,
+    "version_save": 0.011
+  },
+  "total_duration_sec": 46.892,
+  "shap_top": [
+    {
+      "feature": "bytes_sent",
+      "mean_abs_shap": 0.015995192519364154
+    },
+    {
+      "feature": "packet_size",
+      "mean_abs_shap": 0.015995192519364147
+    }
+  ]
+}

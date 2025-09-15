@@ -1,13 +1,13 @@
 {
-  "generated_at": "2025-08-11T01:58:32.762290+00:00",
+  "generated_at": "2025-08-11T18:39:16.356994+00:00",
   "items": [
     {
       "feature": "bytes_sent",
-      "mean_abs_shap": 0.0135633428829248
+      "mean_abs_shap": 0.015995192519364154
     },
     {
       "feature": "packet_size",
-      "mean_abs_shap": 0.013563342882924788
+      "mean_abs_shap": 0.015995192519364147
     }
   ]
 }
